@@ -3,29 +3,29 @@
   --color-brand: var(--brand);
 
   /* Global canvas layer */
-  --color-bg-main: var(--bg-main);
+  --color-main: var(--bg-main);
   --color-surface: var(--surface);
   --color-headline-bg: var(--headline-bg);
 
   /* Global text layer */
-  --color-text-main: var(--text-main);
-  --color-tags-text: var(--tags-text);
-  --color-text-link: var(--text-link);
+  --color-body: var(--text-main);
+  --color-tags: var(--tags-text);
+  --color-link: var(--text-link);
   
   /* Global navbar layer */
-  --color-nav-bg: var(--nav-bg);
+  --color-nav: var(--nav-bg);
   --color-nav-item: var(--nav-item);
   --color-nav-mobile-highlight: var(--nav-mobile-highlight);
 
   /* Global cards layer */
-  --color-cards-contrast: var(--cards-contrast);
-  --color-cards-skills-bg-primary: var(--cards-skills-bg-primary);
-  --color-cards-skills-fg: var(--card-skills-fg);
-  --color-cards-skills-bg-brand: var(--cards-skills-bg-brand);
-  --color-cards-skills-brand-contrast: var(--cards-skills-brand-contrast);
-  --color-cards-project-bg: var(--cards-project-bg);
-  --color-cards-contact-bg: var(--cards-contact-bg);
+  --color-card-skills: var(--cards-skills-bg-primary);
+  --color-card-skills-fg: var(--card-skills-fg);
+  --color-card-skills-brand: var(--cards-skills-bg-brand);
+  --color-card-skills-brand-fg: var(--cards-skills-brand-fg);
+  --color-card-project: var(--cards-project-bg);
+  --color-card-contact: var(--cards-contact-bg);
   --color-card-shadow-color: var(--card-shadow-color);
+  --color-card-skills-badge: var(--cards-skills-badge-bg);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
   /* Global interactive elements */
@@ -51,7 +51,7 @@
   --cards-skills-bg-primary: #efeff0;
   --cards-skills-fg: #1b1a1c;
   --cards-skills-bg-brand: var(--brand);
-  --cards-skills-brand-contrast: var(--white);
+  --cards-skills-brand-fg: var(--white);
   --cards-project-bg: var(--white);
   --cards-contact-bg: var(--white);
   --cards-skills-badge-bg: #0b090b;
