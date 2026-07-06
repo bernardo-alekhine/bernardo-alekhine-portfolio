@@ -8,8 +8,8 @@
   --color-headline-bg: var(--headline-bg);
 
   /* Global text layer */
-  --color-body: var(--text-main);
-  --color-tags: var(--tags-text);
+  --color-body: var(--text-body);
+  --color-tags: var(--tag-text);
   --color-link: var(--text-link);
   
   /* Global navbar layer */
@@ -40,8 +40,8 @@
   --brand: #4551c6;
   --bg-main: #fdfcff;
   --surface: #f9f6ff;
-  --text-main: #1b1a1c;
-  --tags-text: #13cda2;
+  --text-body: #1b1a1c;
+  --tag-text: #13cda2;
   --text-link: var(--brand);
   --headline-bg: #f2f2f2;
   --nav-bg: var(--surface);
@@ -67,7 +67,7 @@
   --brand: #26ebbe;
   --bg-main: #0d0b0d;
   --surface: #161316;
-  --text-main: #f9f6ff;
+  --text-body: #f9f6ff;
   --text-link: var(--brand);
   --headline-bg: #1f1f1f;
   --nav-bg: var(--surface);
