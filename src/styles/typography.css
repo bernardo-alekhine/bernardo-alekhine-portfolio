@@ -1,0 +1,72 @@
+@theme {
+  --font-sans: "InterVariable", "Inter", sans-serif;
+  --text-fluid-display: clamp(2rem, calc(1.549rem + 1.751vw), 3.125rem); /* min: 32px, max: 50px */
+  --text-fluid-lead: clamp(1.25rem, calc(0.949rem + 1.167vw), 2rem); /* min: 20px, max: 32px */
+  --text-fluid-body: clamp(1.125rem, calc(0.925rem + 0.778vw), 1.625rem); /* min: 18px, max: 26px */
+  --text-fluid-heading: clamp(1.625rem, calc(1.224rem + 1.556vw), 2.625rem); /* min: 26px, max: 42px */
+  --text-fluid-subheading: clamp(1.25rem, calc(0.849rem + 1.556vw), 2.25rem); /* min: 20px, max: 36px */
+  --text-fluid-card-title: clamp(1.5rem, calc(1.199rem + 1.167vw), 2.25rem); /* min: 24px, max: 36px */
+  --text-fluid-tags: clamp(1.125rem, calc(0.824rem + 1.167vw), 1.875rem); /* min: 18px, max: 30px */
+  --text-fluid-button: clamp(1.125rem, calc(0.875rem + 0.973vw), 1.75rem); /* min: 18px, max: 28px */
+  --text-fluid-image-title: clamp(1.125rem, calc(0.724rem + 1.556vw), 2.125rem); /* min: 18px, max: 34px */
+  --text-fluid-caption: clamp(0.875rem, calc(0.474rem + 1.556vw), 1.875rem); /* min: 14px, max: 30px */
+}
+
+@utility text-display {
+  @apply text-fluid-display;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@utility text-lead {
+  @apply text-fluid-lead;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@utility text-body {
+  @apply text-fluid-body;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@utility text-heading {
+  @apply text-fluid-heading;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@utility text-subheading {
+  @apply text-fluid-subheading;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@utility text-card-title {
+  @apply text-fluid-card-title;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@utility text-tags {
+  @apply text-fluid-tags;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@utility text-button {
+  @apply text-fluid-button;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@utility text-image-title {
+  @apply text-fluid-image-title;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@utility text-caption {
+  @apply text-fluid-caption;
+  font-weight: 600;
+  line-height: 1.5;
+}
