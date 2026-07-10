@@ -16,7 +16,7 @@ const { title = 'Default Title'} = Astro.props;
     <title>{title}</title>
     <meta name="generator" content={Astro.generator} />
 		
-		<script is:inline>
+	<script is:inline>
       const savedTheme = localStorage.getItem('theme');
       
       if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -24,7 +24,7 @@ const { title = 'Default Title'} = Astro.props;
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
       }
-		</script>
+	</script>
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
