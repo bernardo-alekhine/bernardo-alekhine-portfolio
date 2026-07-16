@@ -1,0 +1,86 @@
+@theme {
+  /* Core brand accent */
+  --color-brand: var(--brand);
+
+  /* Global canvas layer */
+  --color-main: var(--bg-main);
+  --color-surface: var(--surface);
+  --color-headline-bg: var(--headline-bg);
+
+  /* Global text layer */
+  --color-body: var(--text-main);
+  --color-tags: var(--tags-text);
+  --color-link: var(--text-link);
+  
+  /* Global navbar layer */
+  --color-nav: var(--nav-bg);
+  --color-nav-item: var(--nav-item);
+  --color-nav-mobile-highlight: var(--nav-mobile-highlight);
+
+  /* Global cards layer */
+  --color-card-skills: var(--cards-skills-bg-primary);
+  --color-card-skills-fg: var(--card-skills-fg);
+  --color-card-skills-brand: var(--cards-skills-bg-brand);
+  --color-card-skills-brand-fg: var(--cards-skills-brand-fg);
+  --color-card-project: var(--cards-project-bg);
+  --color-card-contact: var(--cards-contact-bg);
+  --color-card-shadow-color: var(--card-shadow-color);
+  --color-card-skills-badge: var(--cards-skills-badge-bg);
+  --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
+
+  /* Global interactive elements */
+  --color-button-text: var(--button-text);
+  --color-button-primary-bg: var(--button-primary-bg);
+  --color-button-outline-text: var(--button-outline-text);
+}
+
+/* Light Mode (default) */
+:root {
+  --white: #ffffff;
+  --brand: #4551c6;
+  --bg-main: #fdfcff;
+  --surface: #f9f6ff;
+  --text-main: #1b1a1c;
+  --tags-text: #13cda2;
+  --text-link: var(--brand);
+  --headline-bg: #f2f2f2;
+  --nav-bg: var(--surface);
+  --nav-item: #47454a;
+  --nav-mobile-highlight: var(--brand);
+  --card-shadow-color: rgba(0, 0, 0, 0.15);
+  --cards-skills-bg-primary: #efeff0;
+  --cards-skills-fg: #1b1a1c;
+  --cards-skills-bg-brand: var(--brand);
+  --cards-skills-brand-fg: var(--white);
+  --cards-project-bg: var(--white);
+  --cards-contact-bg: var(--white);
+  --cards-skills-badge-bg: #0b090b;
+  --button-primary-bg: var(--brand);
+  --button-outline-text: var(--brand);
+  --button-text: var(--white);
+  --footer-bg: #ebebeb;
+  --footer-fg: #858585;
+}
+
+/* Dark Mode */
+:root[data-theme="dark"] {
+  --brand: #26ebbe;
+  --bg-main: #0d0b0d;
+  --surface: #161316;
+  --text-main: #f9f6ff;
+  --text-link: var(--brand);
+  --headline-bg: #1f1f1f;
+  --nav-bg: var(--surface);
+  --nav-item: #b3b0b5;
+  --nav-mobile-highlight: var(--brand);
+  --card-shadow-color: rgba(255, 255, 255, 0.15);
+  --cards-skills-bg-primary: #1e1e1e;
+  --card-skills-fg: #f9f6ff;
+  --cards-project-bg: var(--surface);
+  --cards-contact-bg: var(--surface);
+  --button-primary-bg: var(--brand);
+  --button-outline-text: var(--brand);
+  --button-text: #1b1a1c;
+  --footer-bg: #121212;
+  --footer-fg: #7a7a7a;
+}
