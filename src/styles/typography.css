@@ -2,7 +2,7 @@
   --font-sans: "InterVariable", "Inter", sans-serif;
 
   /* Display */
-  --text-display: clamp(2rem, calc(1.549rem + 1.751vw), 3.125rem); /* min: 32px, max: 50px */
+  --text-display: var(--text-display-fluid);
   --text-display--font-weight: 700;
   --text-display--line-height: 1.2;
 
@@ -50,4 +50,14 @@
   --text-caption: clamp(0.875rem, calc(0.474rem + 1.556vw), 1.875rem); /* min: 14px, max: 30px */
   --text-caption--font-weight: 300;
   --text-caption--line-height: 1.5;
+}
+
+:root {
+  /* 412px @ 32px to 1280px @ 40px */
+  --text-display-fluid: clamp(2rem, calc(1.763rem + 0.922vw), 2.5rem);
+
+  @media (width >= 80rem) {
+    /* 1280px @ 40px to 1440px @ 50px */
+    --text-display-fluid: clamp(2.5rem, calc(-2.5rem + 6.25vw), 3.125rem);
+  }
 }
