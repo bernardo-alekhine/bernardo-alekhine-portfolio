@@ -8,7 +8,7 @@
   --color-headline-bg: var(--headline-bg);
 
   /* Global text layer */
-  --color-body: var(--text-body);
+  --color-body-color: var(--text-body);
   --color-tags: var(--tag-text);
   --color-link: var(--text-link);
   
