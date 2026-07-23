@@ -8,22 +8,32 @@ import heroProfile from '../assets/hero-profile.png';
     w-full min-h-screen
     flex flex-col 
     justify-center items-center
-    px-6 pb-8 gap-4 
+    px-6 pb-8 gap-4
     xl:px-12 xl:pt-12 xl:pb-12 xl:gap-6
   ">
-    <div class="w-full max-w-[1220px] flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between">
+    <div class="
+      w-full max-w-[1220px] 2xl:max-w-[1440px]
+      flex flex-col xl:flex-row 
+      justify-center items-center 
+      gap-4 xl:gap-0 xl:justify-between
+    ">
       <div class="min-h-0 flex justify-center items-center xl:order-last xl:flex-1 xl:justify-end">
         <Image 
           src={heroProfile} 
           alt="Bernardo Alekhine profile with graphic curves"
           loading="eager"
           class="
-            w-[clamp(310px,75vw,622px)] xl:w-[clamp(310px,72vh,622px)] max-w-[410px] xl:max-w-[622px] aspect-square
-        "/>
+            w-[clamp(310px,75vw,622px)] lg:w-[clamp(310px,66vh,622px)] max-w-[410px] xl:max-w-[622px] aspect-square
+           "/>
       </div>
 
-      <div class="w-full max-w-[360px] lg:max-w-[500px] flex flex-col justify-center items-center gap-2 lg:gap-8">
-        <h1 class="text-display text-body-color text-center">
+      <div class="
+        w-full max-w-[360px] lg:max-w-[480px]
+        flex flex-col
+        justify-center items-center 
+        gap-2 lg:gap-8
+      ">
+        <h1 class="max-w-[360px] lg:max-w-[480px] text-display text-body-color text-center">
           Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional de TI
         </h1>
         <p class="text-lead text-body-color text-center">
