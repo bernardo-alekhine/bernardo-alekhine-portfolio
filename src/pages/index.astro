@@ -1,29 +1,9 @@
 ---
-import { Image } from 'astro:assets';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import heroProfile from '../assets/hero-profile.png'; 
+import Hero from '../components/Hero.astro';
 ---
 
-<Layout title="Início">
-  <div class="w-full h-auto">
-    <div class="flex flex-col md:flex-row justify-center items-center px-6 gap-4">
-      <Image 
-        src={heroProfile} 
-        alt="Bernardo Alekhine profile with graphic curves"
-        loading="eager"
-        class="w-[38vw] min-w-[310px] max-w-[622px] h-auto"
-      />
-
-      <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="text-display text-body w-full h-auto">
-          Olá! Meu nome é<br>
-          <span class="text-brand">Bernardo Alekhine</span><br>
-          Designer Gráfico<br>
-          Profissional de TI
-        </h1>
-      </div>
-    </div>
-  </div>
-  <!-- <Welcome /> -->
+<Layout title="Início" class="bg-main">
+  <Hero />
 </Layout>
