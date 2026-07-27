@@ -29,7 +29,7 @@
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
   /* Global interactive elements */
-  --color-button-text: var(--button-text);
+  --color-button-text-color: var(--button-text-color);
   --color-button-primary-bg: var(--button-primary-bg);
   --color-button-outline-text: var(--button-outline-text);
 }
@@ -56,8 +56,8 @@
   --cards-contact-bg: var(--white);
   --cards-skills-badge-bg: #0b090b;
   --button-primary-bg: var(--brand);
-  --button-outline-text: var(--brand);
-  --button-text: var(--white);
+  --button-outline-text-color: var(--brand);
+  --button-text-color: var(--white);
   --footer-bg: #ebebeb;
   --footer-fg: #858585;
 }
@@ -79,8 +79,8 @@
   --cards-project-bg: var(--surface);
   --cards-contact-bg: var(--surface);
   --button-primary-bg: var(--brand);
-  --button-outline-text: var(--brand);
-  --button-text: #1b1a1c;
+  --button-outline-text-color: var(--brand);
+  --button-text-color: #1b1a1c;
   --footer-bg: #121212;
   --footer-fg: #7a7a7a;
 }
