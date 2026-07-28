@@ -9,12 +9,12 @@ const { variant = 'solid', class: className, ...rest } = Astro.props;
 
 // TODO: Decrease padding and remove large fixed size button width, use percentage to fit parent container intstead
 const baseStyles = `
+  w-full
   inline-flex
   items-center justify-center
-  px-20 py-3 xl:px-28 xl:py-3
+  px-[1.25em] py-[0.75em]
   transition-colors
   rounded-3xl lg:rounded-4xl
-  min-w-95 min-h-12 lg:min-w-116 lg:min-h-16
 `;
 
 const variantClasses = {
