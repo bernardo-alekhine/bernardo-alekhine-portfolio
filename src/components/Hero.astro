@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import heroProfile from '../assets/hero-profile.png';
+import Button from './Button.astro';
+import WhatsappIcon from './icons/Whatsapp.astro';
+import ArrowIcon from './icons/Arrow.astro';
+import DownArrow from './DownArrow.astro';
 ---
 
 <section class="w-full min-h-screen">
@@ -9,12 +13,12 @@ import heroProfile from '../assets/hero-profile.png';
     flex flex-col 
     justify-center items-center
     px-6 pb-8 gap-4
-    xl:px-12 xl:pt-12 xl:pb-12 xl:gap-6
+    xl:px-30 xl:pt-12 xl:pb-12
   ">
     <div class="
       w-full max-w-[1220px] 2xl:max-w-[1440px]
       flex flex-col xl:flex-row 
-      justify-center items-center 
+      justify-center items-center
       gap-4 xl:gap-0 xl:justify-between
     ">
       <div class="min-h-0 flex justify-center items-center xl:order-last xl:flex-1 xl:justify-end">
@@ -23,26 +27,36 @@ import heroProfile from '../assets/hero-profile.png';
           alt="Bernardo Alekhine profile with graphic curves"
           loading="eager"
           class="
-            w-[clamp(310px,75vw,622px)] lg:w-[clamp(310px,66vh,622px)] max-w-[410px] xl:max-w-[622px] aspect-square
+            w-[clamp(310px,70vmin,622px)] max-w-[450px] xl:max-w-[622px] aspect-square
            "/>
       </div>
 
       <div class="
-        w-full max-w-[360px] lg:max-w-[480px]
-        flex flex-col
+        flex-1 flex flex-col
+        max-w-[440px]
         justify-center items-center 
-        gap-2 lg:gap-8
+        gap-2 lg:gap-6
       ">
-        <h1 class="max-w-[360px] lg:max-w-[480px] text-display text-body-color text-center">
+        <h1 class="max-w-[20ch] text-display text-body-color text-center">
           Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional de TI
         </h1>
-        <p class="text-lead text-body-color text-center">
+        <p class="max-w-[38ch] text-lead text-body-color text-center">
           Crio soluções visuais combinando tecnologia, criatividade e atenção aos detalhes para comunicar ideias de 
           forma clara e impactante.
         </p>
+
+        <div class="w-full flex flex-col justify-center items-center gap-4 py-5 lg:py-1" id="buttons">
+          <Button variant="solid">
+            <span>Ver Projetos</span>
+            <ArrowIcon class="text-button-text-color" />
+          </Button>
+          <Button variant="outline">
+            <span>Falar no WhatsApp</span>
+            <WhatsappIcon />
+          </Button>
+        </div>
       </div>
     </div>
-
-    <!-- Down arrow here -->
+    <DownArrow />
   </div>
 </section>
