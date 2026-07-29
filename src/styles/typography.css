@@ -2,7 +2,7 @@
   --font-sans: "InterVariable", "Inter", sans-serif;
 
   /* Display 32px @ 412px, 50px @ 1440px*/
-  --text-display: clamp(2rem, calc(1.549rem + 2.0vmin), 3.125rem);
+  --text-display: clamp(2rem, calc(1.549rem + 1.5vmin), 3.125rem);
   --text-display--font-weight: 700;
   --text-display--line-height: 1.2;
 
@@ -37,7 +37,7 @@
   --text-tag--line-height: 1.2;
 
   /* Button 18px @ 412px, 28px @ 1440px*/
-  --text-button: clamp(1.125rem, calc(0.875rem + 0.75vmin), 1.75rem);
+  --text-button: clamp(1.125rem, calc(0.800rem + 0.6vmin), 1.75rem);
   --text-button--font-weight: 400;
   --text-button--line-height: 1.2;
 

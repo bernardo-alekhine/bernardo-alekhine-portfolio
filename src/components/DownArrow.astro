@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'button'>; 
+
+const { class: className, ...props } = Astro.props;
+---
+
+<button 
+  type="button"
+  class:list={[
+    "w-[clamp(2.5rem,calc(1.298rem+7vmin),5.499rem)] aspect-[40/24] block p-0 border-none bg-transparent cursor-pointer", 
+    className
+  ]}
+  {...props}
+>
+  <svg 
+    class="w-full h-full"
+    viewBox="0 0 40 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M35.5076 0.783319C36.5353 -0.261106 38.2015 -0.261106 39.2292 0.783319C40.2569 1.82774 40.2569 3.5211 39.2292 4.56553L21.8608 22.2167C20.8331 23.2611 19.1669 23.2611 18.1392 22.2167L0.770771 4.56553C-0.256924 3.5211 -0.256924 1.82774 0.770771 0.783319C1.79847 -0.261106 3.4647 -0.261106 4.4924 0.783319L20 16.5434L35.5076 0.783319Z" fill="url(#paint0_linear_171_1308)"/>
+    <defs>
+      <linearGradient id="paint0_linear_171_1308" x1="0" y1="11.5" x2="40" y2="11.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#4551C6"/>
+        <stop offset="1" stop-color="#26EBBE"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</button>
