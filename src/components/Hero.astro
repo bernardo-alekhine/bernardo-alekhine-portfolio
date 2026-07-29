@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import heroProfile from '../assets/hero-profile.png';
 import Button from './Button.astro';
+import WhatsappIcon from './icons/Whatsapp.astro';
 ---
 
 <section class="w-full min-h-screen">
@@ -44,7 +45,10 @@ import Button from './Button.astro';
 
         <div class="w-full flex flex-col justify-center items-center gap-4 py-5 lg:py-2" id="buttons">
           <Button variant="solid">Ver Projetos</Button>
-          <Button variant="outline">Falar no WhatsApp</Button>
+          <Button variant="outline">
+            <span>Falar no WhatsApp</span>
+            <WhatsappIcon />
+          </Button>
         </div>
       </div>
     </div>
