@@ -32,7 +32,7 @@ const { title = 'Default Title', class: className} = Astro.props;
     <link rel="icon" href="/favicon.svg" />
 	</head>
   
-  <body class={className}>
+  <body class:list={["flex flex-col min-h-screen pt-22",className]}>
     <Navbar />
 	  <slot/>
 	</body>
