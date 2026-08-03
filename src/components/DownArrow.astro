@@ -6,7 +6,7 @@ type Props = HTMLAttributes<'button'>;
 const { class: className, ...props } = Astro.props;
 ---
 
-<button 
+<button
   type="button"
   class:list={[
     "w-[clamp(2.5rem,calc(1.25rem+7vmin),5.499rem)] aspect-[40/24] block p-0 border-none bg-transparent cursor-pointer", 
@@ -14,7 +14,7 @@ const { class: className, ...props } = Astro.props;
   ]}
   {...props}
 >
-  <svg 
+  <svg
     class="w-full h-full"
     viewBox="0 0 40 24"
     fill="none"
