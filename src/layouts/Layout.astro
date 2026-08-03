@@ -1,39 +1,39 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro'
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 
 interface Props {
-	title?: string;
+  title?: string;
   class?: string;
 }
 
-const { title = 'Default Title', class: className} = Astro.props;
+const { title = "Default Title", class: className } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="generator" content={Astro.generator} />
-		
+
     <script is:inline>
-      const savedTheme = localStorage.getItem('theme');
-      
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.setAttribute("data-theme", "dark");
       } else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute("data-theme", "light");
       }
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.svg" />
-	</head>
-  
-  <body class:list={["flex flex-col min-h-screen pt-22",className]}>
+  </head>
+
+  <body class:list={["flex flex-col min-h-screen pt-22", className]}>
     <Navbar />
-	  <slot/>
-	</body>
+    <slot />
+  </body>
 </html>

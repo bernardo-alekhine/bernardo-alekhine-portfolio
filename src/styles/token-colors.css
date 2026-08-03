@@ -11,7 +11,7 @@
   --color-body-color: var(--text-body);
   --color-tags: var(--tag-text);
   --color-link: var(--text-link);
-  
+
   /* Global navbar layer */
   --color-nav: var(--nav-bg);
   --color-nav-item: var(--nav-item);
