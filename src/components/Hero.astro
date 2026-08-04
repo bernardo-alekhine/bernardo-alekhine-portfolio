@@ -1,31 +1,35 @@
 ---
-import { Image } from 'astro:assets';
-import heroProfile from '../assets/hero-profile.png';
-import Button from './Button.astro';
-import WhatsappIcon from './icons/Whatsapp.astro';
-import ArrowIcon from './icons/Arrow.astro';
-import DownArrow from './DownArrow.astro';
+import { Image } from "astro:assets";
+import heroProfile from "../assets/hero-profile.png";
+import Button from "./Button.astro";
+import WhatsappIcon from "./icons/Whatsapp.astro";
+import ArrowIcon from "./icons/Arrow.astro";
+import DownArrow from "./DownArrow.astro";
 ---
 
 <section class="w-full flex-1 flex flex-col justify-between">
-  <div class={`
+  <div
+    class={`
     w-full flex-1
     flex flex-col 
     justify-center items-center
     px-6 xl:px-30 gap-2
-  `}>
-    <div class={
-      `w-full max-w-[1220px] 2xl:max-w-[1440px]
+  `}
+  >
+    <div
+      class={`w-full max-w-[1220px] 2xl:max-w-[1440px]
       flex flex-col xl:flex-row 
       justify-center items-center
       gap-4 xl:gap-0 xl:justify-between
-    `}>
+    `}
+    >
       <div class="min-h-0 flex justify-center items-center xl:order-last xl:flex-1 xl:justify-end">
-        <Image 
-          src={heroProfile} 
+        <Image
+          src={heroProfile}
           alt="Bernardo Alekhine profile with graphic curves"
           loading="eager"
-          class="w-[clamp(310px,76vmin,600px)] max-w-[450px] xl:max-w-[600px] aspect-square"/>
+          class="w-[clamp(310px,76vmin,600px)] max-w-[450px] xl:max-w-[600px] aspect-square"
+        />
       </div>
 
       <div class="flex-1 flex flex-col max-w-[440px] justify-center items-center gap-2 lg:gap-6">
@@ -33,7 +37,7 @@ import DownArrow from './DownArrow.astro';
           Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional de TI
         </h1>
         <p class="max-w-[38ch] text-lead text-body-color text-center">
-          Crio soluções visuais combinando tecnologia, criatividade e atenção aos detalhes para comunicar ideias de 
+          Crio soluções visuais combinando tecnologia, criatividade e atenção aos detalhes para comunicar ideias de
           forma clara e impactante.
         </p>
 

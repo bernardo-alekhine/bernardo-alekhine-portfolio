@@ -1,11 +1,11 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-interface Props extends HTMLAttributes<'button'> {
-  variant?: 'solid' | 'outline';
+interface Props extends HTMLAttributes<"button"> {
+  variant?: "solid" | "outline";
 }
 
-const { variant = 'solid', class: className, ...rest } = Astro.props;
+const { variant = "solid", class: className, ...rest } = Astro.props;
 
 // TODO: Decrease padding and remove large fixed size button width, use percentage to fit parent container intstead
 const baseStyles = `
@@ -22,8 +22,8 @@ const baseStyles = `
 
 const variantClasses = {
   // hover:bg-[color:var(--color-primary-700)]
-  solid: 'bg-brand text-button-text-color',
-  outline: 'border border-brand text-brand',
+  solid: "bg-brand text-button-text-color",
+  outline: "border border-brand text-brand",
 };
 ---
 

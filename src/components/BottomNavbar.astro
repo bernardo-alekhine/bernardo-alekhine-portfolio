@@ -1,11 +1,9 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<'button'>; 
+type Props = HTMLAttributes<"button">;
 
 const { class: className, ...props } = Astro.props;
 ---
 
-<nav class:list={["w-full h-16 fixed bottom-0 inset-x-0 bg-nav", className]} {...props}>
-
-</nav>
+<nav class:list={["w-full h-16 fixed bottom-0 inset-x-0 bg-nav", className]} {...props}></nav>
