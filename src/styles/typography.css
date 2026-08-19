@@ -36,10 +36,15 @@
   --text-tag--font-weight: 600;
   --text-tag--line-height: 1.2;
 
-  /* Button 18px @ 412px, 28px @ 1440px*/
+  /* Text Button 18px @ 412px, 28px @ 1440px */
   --text-button: clamp(1.125rem, calc(0.8rem + 0.6vmin), 1.75rem);
   --text-button--font-weight: 400;
   --text-button--line-height: 1.2;
+
+  /* Navbar Anchor 18px @ 1024px, 24px @ 1440px */
+  --text-navbar-anchor: clamp(1.125rem, calc(0.9rem + 0.8vmin), 1.5rem);
+  --text-navbar-anchor--font-weight: 400;
+  --text-navbar-anchor--line-height: 1.2;
 
   /* Image title */
   --text-image-title: clamp(1.125rem, calc(0.724rem + 1.556vw), 2.125rem); /* min: 18px, max: 34px */
