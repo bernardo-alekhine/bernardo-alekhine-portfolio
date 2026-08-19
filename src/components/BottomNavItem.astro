@@ -1,29 +1,21 @@
 ---
 interface Props {
-  href: string;
-  label: string;
-  isActive: boolean;
-  inactiveIcon: string; // SVG path data or SVG string
-  activeIcon: string; // SVG path data or SVG string
+  href?: string;
+  label?: string;
+  isActive?: boolean;
 }
 
-const { href, label, isActive, inactiveIcon, activeIcon } = Astro.props;
+const { href = "#", label = "", isActive = false } = Astro.props;
 ---
 
 <a
   href={href}
-  class={`flex flex-col items-center gap-1 bottomnavbutton transition-colors ${
-    isActive ? "text-indigo-500 font-semibold" : "text-slate-400 hover:text-slate-200"
+  class={`flex flex-col items-center justify-between bottom-navbar-anchor transition-colors w-12 h-12 ${
+    isActive ? "text-brand" : "text-body-color"
   }`}
 >
-  <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
-    {
-      isActive ? (
-        <path class="fill-current" d={activeIcon} />
-      ) : (
-        <path class="fill-none stroke-current" stroke-width="2" d={inactiveIcon} />
-      )
-    }
-  </svg>
+  <div class="w-6 h-6 flex items-center justify-center">
+    {isActive ? <slot name="active-icon" /> : <slot name="inactive-icon" />}
+  </div>
   <span>{label}</span>
 </a>
