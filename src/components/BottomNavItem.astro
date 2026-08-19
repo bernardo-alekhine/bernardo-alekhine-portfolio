@@ -15,7 +15,7 @@ const { href = "#", label = "", isActive = false } = Astro.props;
   }`}
 >
   <div class="w-6 h-6 flex items-center justify-center shrink-0">
-    {isActive ? <slot name="active-icon" /> : <slot name="inactive-icon" />}
+    {isActive ? <slot name="highlight-icon" /> : <slot name="default-icon" />}
   </div>
   <span>{label}</span>
 </a>
