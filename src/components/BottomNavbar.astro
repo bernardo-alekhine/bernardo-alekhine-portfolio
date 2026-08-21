@@ -7,7 +7,7 @@ type Props = HTMLAttributes<"button">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<nav class:list={["w-full h-18 flex items-center fixed bottom-0 inset-x-0 px-5 bg-nav", className]} {...props}>
+<nav class:list={["w-full h-17 flex items-center fixed bottom-0 inset-x-0 px-5 bg-nav", className]} {...props}>
   <BottomNavItem label="Projetos" href="#">
     <!-- Default icon SVG -->
     <svg
@@ -27,7 +27,21 @@ const { class: className, ...props } = Astro.props;
     </svg>
 
     <!-- Highlight SVG -->
-    <svg slot="highlight-icon"></svg>
+    <svg
+      class="w-full h-full fill-brand"
+      width="34"
+      height="26"
+      viewBox="0 0 34 26"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      slot="highlight-icon"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M16.6059 2.75788H28.6428C31.5684 2.75788 34 5.56301 34 9.0858V19.6721C34 23.1949 31.5684 26 28.6428 26H5.35752C2.43191 26 0 23.1949 0 19.6721V9.0858C0 8.8092 0.0151994 8.53649 0.0441909 8.27036V3.21629C0.0441909 1.40959 1.317 0 2.81752 0H13.7428C14.1813 0 14.6058 0.206326 14.907 0.590569L16.6059 2.75788Z"
+      ></path>
+    </svg>
   </BottomNavItem>
 
   <BottomNavItem label="Contato" href="#">
