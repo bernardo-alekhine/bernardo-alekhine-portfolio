@@ -47,7 +47,7 @@
   --text-top-navbar-anchor--line-height: 1.2;
 
   /* Bottom Navbar Anchor 12px @ 412px, 14px @ 1024px */
-  --text-bottom-navbar-anchor: clamp(0.75rem, calc(0.6rem + 0.8vmin), 0.875rem);
+  --text-bottom-navbar-anchor: clamp(0.75rem, calc(0.65rem + 0.4vmin), 0.875rem);
   --text-bottom-navbar-anchor--font-weight: 400;
   --text-bottom-navbar-anchor--line-height: 1;
 
