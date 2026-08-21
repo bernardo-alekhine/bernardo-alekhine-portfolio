@@ -97,6 +97,20 @@ const { class: className, ...props } = Astro.props;
     </svg>
 
     <!-- Highlight SVG -->
-    <svg slot="highlight-icon"></svg>
+    <svg
+      class="w-full h-full fill-brand"
+      width="24"
+      height="30"
+      viewBox="0 0 24 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      slot="highlight-icon"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 17.8481C18.5956 17.8481 24 22.6255 24 28.5531C24 28.8166 23.9893 29.7411 23.9685 30H0.0317483C0.010679 29.7414 0 28.8166 0 28.5531C0 22.6252 5.40443 17.8481 12 17.8481ZM11.9988 0C16.6165 0 20.3455 3.605 20.3455 8.01903C20.3452 12.4331 16.6165 16.0381 11.9988 16.0381C7.38177 16.0378 3.65366 12.4328 3.65366 8.01903C3.65366 3.605 7.38149 0.000288631 11.9988 0Z"
+      ></path>
+    </svg>
   </BottomNavItem>
 </nav>
