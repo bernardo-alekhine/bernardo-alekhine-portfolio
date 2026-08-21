@@ -10,7 +10,7 @@ const { href = "#", label = "", isActive = false } = Astro.props;
 
 <a
   href={href}
-  class={`flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor text-nav-item transition-colors w-14 h-14 gap-1.5 ${
+  class={`flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor text-nav-item transition-colors w-14 h-14 gap-1 ${
     isActive ? "text-brand" : "text-body-color"
   }`}
 >

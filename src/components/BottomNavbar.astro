@@ -7,7 +7,7 @@ type Props = HTMLAttributes<"button">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<nav class:list={["w-full h-14 flex items-center fixed bottom-0 inset-x-0 px-5 bg-nav", className]} {...props}>
+<nav class:list={["w-full h-12 flex items-center fixed bottom-0 inset-x-0 bg-nav", className]} {...props}>
   <BottomNavItem label="Contato" href="#">
     <!-- Default icon SVG -->
     <svg
