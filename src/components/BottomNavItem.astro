@@ -1,0 +1,21 @@
+---
+interface Props {
+  href?: string;
+  label?: string;
+  isActive?: boolean;
+}
+
+const { href = "#", label = "", isActive = false } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`flex flex-1 flex-col items-center justify-between text-bottom-navbar-anchor transition-colors w-12 h-12 gap-2 ${
+    isActive ? "text-brand" : "text-body-color"
+  }`}
+>
+  <div class="w-8 h-8 flex items-center justify-center shrink-0">
+    {isActive ? <slot name="highlight-icon" /> : <slot name="default-icon" />}
+  </div>
+  <span>{label}</span>
+</a>

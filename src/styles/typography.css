@@ -41,10 +41,15 @@
   --text-button--font-weight: 400;
   --text-button--line-height: 1.2;
 
-  /* Navbar Anchor 18px @ 1024px, 24px @ 1440px */
-  --text-navbar-anchor: clamp(1.125rem, calc(0.9rem + 0.8vmin), 1.5rem);
-  --text-navbar-anchor--font-weight: 400;
-  --text-navbar-anchor--line-height: 1.2;
+  /* Top Navbar Anchor 18px @ 1024px, 24px @ 1440px */
+  --text-top-navbar-anchor: clamp(1.125rem, calc(0.9rem + 0.8vmin), 1.5rem);
+  --text-top-navbar-anchor--font-weight: 400;
+  --text-top-navbar-anchor--line-height: 1.2;
+
+  /* Bottom Navbar Anchor 12px @ 412px, 14px @ 1024px */
+  --text-bottom-navbar-anchor: clamp(0.75rem, calc(0.6rem + 0.8vmin), 0.875rem);
+  --text-bottom-navbar-anchor--font-weight: 400;
+  --text-bottom-navbar-anchor--line-height: 1;
 
   /* Image title */
   --text-image-title: clamp(1.125rem, calc(0.724rem + 1.556vw), 2.125rem); /* min: 18px, max: 34px */
