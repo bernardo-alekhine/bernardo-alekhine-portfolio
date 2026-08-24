@@ -5,7 +5,7 @@
   /* Global canvas layer */
   --color-main: var(--bg-main);
   --color-surface: var(--surface);
-  --color-headline-bg: var(--headline-bg);
+  --color-section-banner: var(--section-banner);
 
   /* Global text layer */
   --color-body-color: var(--text-body);
@@ -47,7 +47,7 @@
   --text-body: #1b1a1c;
   --tag-text: #13cda2;
   --text-link: var(--brand);
-  --headline-bg: #f2f2f2;
+  --section-banner: #f2f2f2;
   --nav-bg: var(--surface);
   --nav-item: #47454a;
   --nav-mobile-highlight: var(--brand);
@@ -73,7 +73,7 @@
   --surface: #161316;
   --text-body: #f9f6ff;
   --text-link: var(--brand);
-  --headline-bg: #1f1f1f;
+  --section-banner: #1f1f1f;
   --nav-bg: var(--surface);
   --nav-item: #b3b0b5;
   --nav-mobile-highlight: var(--brand);
