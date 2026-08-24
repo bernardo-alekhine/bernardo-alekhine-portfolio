@@ -17,6 +17,10 @@
   --color-nav-item: var(--nav-item);
   --color-nav-mobile-highlight: var(--nav-mobile-highlight);
 
+  /* Global footer layer */
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-fg: var(--footer-fg);
+
   /* Global cards layer */
   --color-card-skills: var(--cards-skills-bg-primary);
   --color-card-skills-fg: var(--card-skills-fg);

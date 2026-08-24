@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
@@ -32,8 +33,9 @@ const { title = "Default Title", class: className } = Astro.props;
     <link rel="icon" href="/favicon.svg" />
   </head>
 
-  <body class:list={["flex flex-col min-h-screen pb-22 pt-22 lg:pb-0", className]}>
+  <body class:list={["flex flex-col min-h-screen", className]}>
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
