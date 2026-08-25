@@ -1,3 +1,9 @@
-<div class="w-full flex flex-col bg-section-banner">
-  <slot />
+---
+import Container from "./Container.astro";
+---
+
+<div class="w-full bg-section-banner">
+  <Container class="flex flex-col items-center gap-4 py-8 px-10 xl:px-16 text-center">
+    <slot />
+  </Container>
 </div>

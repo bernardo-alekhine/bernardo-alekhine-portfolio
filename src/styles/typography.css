@@ -18,8 +18,8 @@
   --text-main-body--font-weight: 400;
   --text-main-body--line-height: 1.5;
 
-  /* Heading */
-  --text-heading: clamp(1.625rem, calc(1.224rem + 1.556vw), 2.625rem); /* min: 26px, max: 42px */
+  /* Heading 26px @ 412px, 42px @ 1440px */
+  --text-heading: clamp(1.625rem, calc(1.224rem + 1.56vmin), 2.625rem);
   --text-heading--font-weight: 600;
   --text-heading--line-height: 1.2;
 
