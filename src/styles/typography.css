@@ -28,8 +28,8 @@
   --text-subheading--font-weight: 500;
   --text-subheading--line-height: 1.2;
 
-  /* Card title */
-  --text-card-title: clamp(1.5rem, calc(1.199rem + 1.167vw), 2.25rem); /* min: 24px, max: 36px */
+  /* Card title 24 px @ 412, 36px @ 1440px */
+  --text-card-title: clamp(1.5rem, calc(1.2rem + 1vmin), 2.25rem);
   --text-card-title--font-weight: 700;
   --text-card-title--line-height: 1.5;
 

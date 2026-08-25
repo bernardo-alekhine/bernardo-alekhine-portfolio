@@ -54,7 +54,7 @@
   --card-shadow-color: rgba(0, 0, 0, 0.15);
   --cards-skills-bg-primary: #efeff0;
   --cards-skills-fg: #1b1a1c;
-  --cards-skills-bg-brand: var(--brand);
+  --cards-skills-bg-brand: #4551c6;
   --cards-skills-brand-fg: var(--white);
   --cards-project-bg: var(--white);
   --cards-contact-bg: var(--white);
