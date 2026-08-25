@@ -12,7 +12,7 @@ const { title = "Default Title", class: className } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html class="scroll-pt-16 md:scroll-pt-22" lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -33,7 +33,7 @@ const { title = "Default Title", class: className } = Astro.props;
     <link rel="icon" href="/favicon.svg" />
   </head>
 
-  <body class:list={["flex flex-col min-h-screen", className]}>
+  <body class:list={["flex flex-col min-h-screen pt-16 xl:pt-22", className]}>
     <Navbar />
     <slot />
     <Footer />
