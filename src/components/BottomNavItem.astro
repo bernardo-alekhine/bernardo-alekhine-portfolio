@@ -6,13 +6,15 @@ interface Props extends HTMLAttributes<"a"> {
   isActive?: boolean;
 }
 
-const { href = "#", label = "", isActive = false, class: className, ...restProps } = Astro.props;
+const { href = "#", label = "", class: className, ...restProps } = Astro.props;
+const currentPath = Astro.url.pathname;
+const isActive = currentPath === href;
 ---
 
 <a
   href={href}
   class:list={[
-    "flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor text-nav-item transition-colors w-14 h-14 gap-1 select-none",
+    "flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor transition-colors w-14 h-14 gap-1 select-none",
     isActive ? "text-brand" : "text-body-color",
     className,
   ]}
