@@ -7,13 +7,12 @@ interface Props extends HTMLAttributes<"a"> {
 }
 
 const { href = "#", label = "", class: className, ...restProps } = Astro.props;
-const currentPath = Astro.url.pathname;
-const isActive = currentPath === href;
----
+const normalizePath = (path: string) => (path !== "/" ? path.replace(/\/$/, "") : path);
 
-<p class="fixed top-0 left-0 z-50 bg-white text-black">
-  {Astro.url.pathname}
-</p>
+const currentPath = normalizePath(Astro.url.pathname);
+const targetPath = normalizePath(String(href));
+const isActive = currentPath === targetPath;
+---
 
 <a
   href={href}
