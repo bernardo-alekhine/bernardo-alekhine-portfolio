@@ -1,11 +1,11 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-interface Props extends HTMLAttributes<"button"> {
+interface Props extends HTMLAttributes<"a"> {
   variant?: "solid" | "outline";
 }
 
-const { variant = "solid", class: className, ...rest } = Astro.props;
+const { href = "#", variant = "solid", class: className, ...restProps } = Astro.props;
 
 // TODO: Decrease padding and remove large fixed size button width, use percentage to fit parent container intstead
 const baseStyles = `
@@ -29,6 +29,6 @@ const variantClasses = {
 };
 ---
 
-<button class:list={[baseStyles, variantClasses[variant], className]} {...rest}>
+<a href={href} class:list={[baseStyles, variantClasses[variant], className]} {...restProps}>
   <slot />
-</button>
+</a>
