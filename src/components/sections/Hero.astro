@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import heroProfile from "../../assets/hero-profile.png";
 import Section from "../Section.astro";
 import Container from "../Container.astro";
-import Button from "../Button.astro";
+import LinkButton from "../LinkButton.astro";
 import WhatsappIcon from "../icons/Whatsapp.astro";
 import ArrowIcon from "../icons/Arrow.astro";
 import DownArrow from "../DownArrow.astro";
@@ -31,14 +31,14 @@ import DownArrow from "../DownArrow.astro";
             forma clara e impactante.
           </p>
           <div class="w-full flex flex-col justify-center items-center gap-3 py-5 lg:py-1" id="buttons">
-            <Button variant="solid">
+            <LinkButton href="/project-gallery" variant="solid">
               <span>Ver Projetos</span>
               <ArrowIcon class="text-button-text-color" />
-            </Button>
-            <Button variant="outline">
+            </LinkButton>
+            <LinkButton href="https://wa.me/5538998552879" target="_blank" rel="noopener noreferrer" variant="outline">
               <span>Falar no WhatsApp</span>
               <WhatsappIcon />
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </div>
