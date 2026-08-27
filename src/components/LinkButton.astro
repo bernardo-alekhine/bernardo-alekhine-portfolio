@@ -15,21 +15,23 @@ const baseStyles = `
   h-[2.8em]
   px-[1.25em]
   gap-[0.7em]
-  transition-colors
   text-button
   rounded-3xl lg:rounded-4xl
   select-none
   [&>svg]:select-none
+  duration-200
+  active:scale-98
+  transition-[transform,background-color,border-color]
+  ease-in-out
   transition-colors
 `;
 
 const variantClasses = {
-  solid: "bg-brand text-button-text-color hover:bg-button-primary-hover duration-200",
-  outline:
-    "border border-brand text-brand hover:border-button-primary-hover hover:bg-button-outline-hover duration-200",
+  solid: "bg-brand text-button-text-color hover:bg-button-primary-hover",
+  outline: "border border-brand text-brand hover:border-button-primary-hover hover:bg-button-outline-hover",
 };
 ---
 
-<a href={href} class:list={[baseStyles, variantClasses[variant], className]} {...restProps}>
+<a href={href} draggable="false" class:list={[baseStyles, variantClasses[variant], className]} {...restProps}>
   <slot />
 </a>
