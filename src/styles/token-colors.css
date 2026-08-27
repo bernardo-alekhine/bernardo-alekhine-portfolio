@@ -17,6 +17,7 @@
   --color-nav: var(--nav-bg);
   --color-nav-item: var(--nav-item);
   --color-nav-mobile-highlight: var(--nav-mobile-highlight);
+  --color-nav-anchor-hover: var(--nav-anchor-hover);
 
   /* Global footer layer */
   --color-footer-bg: var(--footer-bg);
@@ -40,6 +41,7 @@
   --color-button-text-color: var(--button-text-color);
   --color-button-primary-bg: var(--button-primary-bg);
   --color-button-outline-text: var(--button-outline-text);
+  --color-button-primary-hover: var(--button-primary-hover);
 }
 
 /* Light Mode (default) */
@@ -54,6 +56,7 @@
   --text-link: var(--brand);
   --section-banner: #f2f2f2;
   --nav-bg: var(--surface);
+  --nav-anchor-hover: var(--brand);
   --nav-item: #47454a;
   --nav-mobile-highlight: var(--brand);
   --card-shadow-color: rgba(0, 0, 0, 0.15);
@@ -66,6 +69,7 @@
   --cards-skills-badge-bg: #0b090b;
   --button-primary-bg: var(--brand);
   --button-outline-text-color: var(--brand);
+  --button-primary-hover: #5060f7;
   --button-text-color: var(--white);
   --footer-bg: #ebebeb;
   --footer-fg: #858585;
@@ -81,6 +85,7 @@
   --text-link: var(--brand);
   --section-banner: #1f1f1f;
   --nav-bg: var(--surface);
+  --nav-anchor-hover: var(--brand);
   --nav-item: #b3b0b5;
   --nav-mobile-highlight: var(--brand);
   --card-shadow-color: rgba(255, 255, 255, 0.15);
@@ -90,6 +95,7 @@
   --cards-contact-bg: var(--surface);
   --button-primary-bg: var(--brand);
   --button-outline-text-color: var(--brand);
+  --button-primary-hover: #7cf4d8;
   --button-text-color: #1b1a1c;
   --footer-bg: #121212;
   --footer-fg: #7a7a7a;
