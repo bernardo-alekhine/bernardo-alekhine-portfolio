@@ -8,34 +8,63 @@ import CopyEmailButton from "./CopyEmailButton.astro";
   <div
     class="w-full flex flex-1 flex-row gap-20 md:gap-30 justify-center items-start px-8 xl:gap-0 xl:justify-between lg:px-12"
   >
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col items-start gap-4">
       <p class="text-main-body text-body-color tracking-wide mb-1 select-none">Contato</p>
       <a
-        class="text-footer-link text-brand"
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
         href="https://wa.me/5538998552879"
         target="_blank"
         rel="noopener noreferrer"
       >
         WhatsApp
       </a>
-      <CopyEmailButton email="alekhinebernardo@gmail.com" label="Copiar Email" class="text-footer-link text-brand" />
-      <a class="text-footer-link text-brand" href="https://www.linkedin.com/in/bernardo-alekhine/"> LinkedIn </a>
-      <a class="text-footer-link text-brand" href="https://github.com/bernardo-alekhine"> GitHub </a>
+      <CopyEmailButton
+        email="alekhinebernardo@gmail.com"
+        label="Copiar Email"
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
+      />
+      <a
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
+        href="https://www.linkedin.com/in/bernardo-alekhine/"
+      >
+        LinkedIn
+      </a>
+      <a
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
+        href="https://github.com/bernardo-alekhine"
+      >
+        GitHub
+      </a>
     </div>
 
-    <div class="hidden md:flex flex-col gap-4">
+    <div class="hidden md:flex flex-col items-start gap-4">
       <p class="text-main-body text-body-color tracking-wide mb-1 select-none">Recursos</p>
-      <a class="text-footer-link text-brand" href="#"> Projetos em Destaque </a>
-      <a class="text-footer-link text-brand" href="#"> Serviços e Especialidades </a>
-      <a class="text-footer-link text-brand" href="#"> Baixar Currículo </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="#">
+        Projetos em Destaque
+      </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="#">
+        Serviços e Especialidades
+      </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="#">
+        Baixar Currículo
+      </a>
     </div>
 
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col items-start gap-4">
       <p class="text-main-body text-body-color tracking-wide mb-1 select-none">Navegação</p>
-      <a class="text-footer-link text-brand" href="/"> Início </a>
-      <a class="text-footer-link text-brand" href="/project-gallery"> Projetos </a>
-      <a class="text-footer-link text-brand" href="#"> Contato </a>
-      <a class="text-footer-link text-brand" href="/profile"> Perfil </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="/"> Início </a>
+      <a
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
+        href="/project-gallery"
+      >
+        Projetos
+      </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="#">
+        Contato
+      </a>
+      <a class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200" href="/profile">
+        Perfil
+      </a>
     </div>
   </div>
 
