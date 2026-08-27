@@ -32,6 +32,9 @@
   --color-card-skills-badge: var(--cards-skills-badge-bg);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
+  /* Global toast layer */
+  --color-toast: var(--surface);
+
   /* Global interactive elements */
   --color-button-text-color: var(--button-text-color);
   --color-button-primary-bg: var(--button-primary-bg);
