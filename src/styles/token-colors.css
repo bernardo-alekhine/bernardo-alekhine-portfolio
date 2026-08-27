@@ -1,6 +1,7 @@
 @theme {
   /* Core brand accent */
   --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
 
   /* Global canvas layer */
   --color-main: var(--bg-main);
@@ -32,6 +33,9 @@
   --color-card-skills-badge: var(--cards-skills-badge-bg);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
+  /* Global toast layer */
+  --color-toast: var(--surface);
+
   /* Global interactive elements */
   --color-button-text-color: var(--button-text-color);
   --color-button-primary-bg: var(--button-primary-bg);
@@ -42,6 +46,7 @@
 :root {
   --white: #ffffff;
   --brand: #4551c6;
+  --brand-hover: #7683f9;
   --bg-main: #fdfcff;
   --surface: #f9f6ff;
   --text-body: #1b1a1c;
@@ -69,6 +74,7 @@
 /* Dark Mode */
 :root[data-theme="dark"] {
   --brand: #26ebbe;
+  --brand-hover: #b4f8e8;
   --bg-main: #0d0b0d;
   --surface: #161316;
   --text-body: #f9f6ff;
