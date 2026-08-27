@@ -4,12 +4,11 @@ import heroProfile from "../../assets/hero-profile.png";
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import LinkButton from "../LinkButton.astro";
-import WhatsappIcon from "../icons/Whatsapp.astro";
+import WhatsAppIcon from "../icons/WhatsApp.astro";
 import ArrowIcon from "../icons/Arrow.astro";
 import DownArrow from "../DownArrow.astro";
 ---
 
-<!-- TODO Have px-6 and xl:px-30 be applied as it is to Section on Container instead (container has max width boundary so content gets pushed to close together if passing to it directly) -->
 <Section id="hero">
   <Container class="xl:max-w-[90%] px-4 xl:px-8">
     <div class="pt-3">
@@ -37,7 +36,7 @@ import DownArrow from "../DownArrow.astro";
             </LinkButton>
             <LinkButton href="https://wa.me/5538998552879" target="_blank" rel="noopener noreferrer" variant="outline">
               <span>Falar no WhatsApp</span>
-              <WhatsappIcon />
+              <WhatsAppIcon class="fill-current" />
             </LinkButton>
           </div>
         </div>
