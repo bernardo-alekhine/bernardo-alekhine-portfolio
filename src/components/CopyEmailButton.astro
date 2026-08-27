@@ -1,0 +1,76 @@
+---
+interface Props {
+  email: string;
+  label?: string;
+  class?: string;
+}
+
+const { email, label, class: className = "" } = Astro.props;
+---
+
+<button
+  type="button"
+  data-copy-email={email}
+  class={`js-copy-email cursor-pointer inline text-left bg-transparent border-0 p-0 font-inherit ${className}`}
+  title="Copiar Email para área de transferência."
+>
+  <slot>{label || email}</slot>
+</button>
+
+<div
+  id="copy-toast"
+  class="pointer-events-none fixed bottom-20 left-1/2 z-50 flex max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center gap-2 rounded-lg bg-gray-900 px-4 py-3 text-sm font-medium text-white shadow-xl transition-all duration-300 opacity-0 translate-y-3 shrink-0 whitespace-nowrap dark:bg-white dark:text-gray-900 sm:bottom-6 sm:right-6 sm:left-auto sm:translate-x-0 sm:max-w-md"
+  role="status"
+  role="status"
+  aria-live="polite"
+>
+  <!-- Checkmark Icon -->
+  <svg
+    class="h-4 w-4 shrink-0 text-emerald-400 dark:text-emerald-600"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+  </svg>
+  <span>Email copiado para área de transferência!</span>
+</div>
+
+<script>
+  let timer: ReturnType<typeof setTimeout>;
+
+  // Native event delegation handles all instances across footer, contact block, etc.
+  document.addEventListener("click", async (e) => {
+    const target = e.target as HTMLElement;
+    const button = target.closest("[data-copy-email]") as HTMLButtonElement;
+    if (!button) return;
+
+    const email = button.getAttribute("data-copy-email");
+    if (!email) return;
+
+    try {
+      await navigator.clipboard.writeText(email);
+      triggerToast();
+    } catch {
+      // Direct mailto fallback if permissions or context block clipboard access
+      window.location.href = `mailto:${email}`;
+    }
+  });
+
+  function triggerToast() {
+    const toast = document.getElementById("copy-toast");
+    if (!toast) return;
+
+    clearTimeout(timer);
+
+    // Fade/Slide In
+    toast.classList.remove("opacity-0", "translate-y-3");
+    toast.classList.add("opacity-100", "translate-y-0");
+
+    // Fade/Slide Out
+    timer = setTimeout(() => {
+      toast.classList.remove("opacity-100", "translate-y-0");
+      toast.classList.add("opacity-0", "translate-y-3");
+    }, 2500);
+  }
+</script>
