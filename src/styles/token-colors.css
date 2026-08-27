@@ -40,8 +40,9 @@
   /* Global interactive elements */
   --color-button-text-color: var(--button-text-color);
   --color-button-primary-bg: var(--button-primary-bg);
-  --color-button-outline-text: var(--button-outline-text);
   --color-button-primary-hover: var(--button-primary-hover);
+  --color-button-outline-text: var(--button-outline-text);
+  --color-button-outline-hover: var(--button-outline-hover);
 }
 
 /* Light Mode (default) */
@@ -70,6 +71,7 @@
   --button-primary-bg: var(--brand);
   --button-outline-text-color: var(--brand);
   --button-primary-hover: #5060f7;
+  --button-outline-hover: #efeff0;
   --button-text-color: var(--white);
   --footer-bg: #ebebeb;
   --footer-fg: #858585;
@@ -96,6 +98,7 @@
   --button-primary-bg: var(--brand);
   --button-outline-text-color: var(--brand);
   --button-primary-hover: #7cf4d8;
+  --button-outline-hover: #1e1e1e;
   --button-text-color: #1b1a1c;
   --footer-bg: #121212;
   --footer-fg: #7a7a7a;
