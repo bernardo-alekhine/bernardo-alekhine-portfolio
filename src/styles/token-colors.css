@@ -17,6 +17,7 @@
   --color-nav: var(--nav-bg);
   --color-nav-item: var(--nav-item);
   --color-nav-mobile-highlight: var(--nav-mobile-highlight);
+  --color-nav-anchor-hover: var(--nav-anchor-hover);
 
   /* Global footer layer */
   --color-footer-bg: var(--footer-bg);
@@ -54,6 +55,7 @@
   --text-link: var(--brand);
   --section-banner: #f2f2f2;
   --nav-bg: var(--surface);
+  --nav-anchor-hover: var(--brand);
   --nav-item: #47454a;
   --nav-mobile-highlight: var(--brand);
   --card-shadow-color: rgba(0, 0, 0, 0.15);
@@ -81,6 +83,7 @@
   --text-link: var(--brand);
   --section-banner: #1f1f1f;
   --nav-bg: var(--surface);
+  --nav-anchor-hover: var(--brand);
   --nav-item: #b3b0b5;
   --nav-mobile-highlight: var(--brand);
   --card-shadow-color: rgba(255, 255, 255, 0.15);
