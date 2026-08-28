@@ -1,5 +1,5 @@
 ---
-import LogoMonogram from "./icons/LogoMonogram.astro";
+import LogoMonogram from "../icons/LogoMonogram.astro";
 
 const normalizePath = (path: string) => (path !== "/" ? path.replace(/\/$/, "") : path);
 const currentPath = normalizePath(Astro.url.pathname);
