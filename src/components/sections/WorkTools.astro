@@ -3,6 +3,13 @@ import Section from "../Section.astro";
 import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
 import WorkToolCard from "../cards/WorkToolCard.astro";
+import AffinityIcon from "../icons/work-tools/Affinity.astro";
+import AstroIcon from "../icons/work-tools/Astro.astro";
+import CorelDrawIcon from "../icons/work-tools/CorelDraw.astro";
+import FigmaIcon from "../icons/work-tools/Figma.astro";
+import PythonIcon from "../icons/work-tools/Python.astro";
+import SQLIcon from "../icons/work-tools/SQL.astro";
+import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
 ---
 
 <Section id="work-tools">
@@ -12,7 +19,9 @@ import WorkToolCard from "../cards/WorkToolCard.astro";
 
   <Container class="py-2 px-6">
     <div class="grid grid-cols-4">
-      <WorkToolCard title="" />
+      <WorkToolCard tileBg="#a7f175" title="Affinity">
+        <AffinityIcon />
+      </WorkToolCard>
     </div>
   </Container>
 </Section>

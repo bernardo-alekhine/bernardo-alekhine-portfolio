@@ -11,7 +11,7 @@ const { title, tileBg = "bg-card-work-tools" } = Astro.props;
   class={`flex flex-col items-center px-6 gap-4 py-8 md:gap-6 lg:px-16 lg:py-12 [&>svg]:select-none rounded-lg \
   lg:rounded-xl shadow-md md:shadow-lg shadow-card-shadow-color transition-colors`}
 >
-  <strong class="text-card-title text-main-body-color">{title}</strong>
+  <strong class="text-card-title text-body-color">{title}</strong>
   <div class={`w-[70%] h-auto ${tileBg}`}>
     <slot />
   </div>
