@@ -9,7 +9,9 @@ const { class: className, ...props } = Astro.props;
 <button
   type="button"
   class:list={[
-    "w-[clamp(3rem,calc(1.25rem+7vmin),5.499rem)] aspect-[40/24] block p-0 border-none bg-transparent cursor-pointer select-none [&>svg]:select-none",
+    "w-[clamp(3rem,calc(1.25rem+7vmin),5.499rem)] aspect-[40/24] block p-0 border-none bg-transparent cursor-pointer",
+    "select-none [&>svg]:select-none focus:outline-none",
+    "transition-transform duration-300 ease-in-out hover:translate-y-1.5 active:translate-y-2 active:scale-95",
     className,
   ]}
   {...props}
