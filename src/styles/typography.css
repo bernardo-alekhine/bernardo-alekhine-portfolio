@@ -21,9 +21,9 @@
   --text-heading--font-weight: 600;
   --text-heading--line-height: 1.2;
 
-  /* Subheading */
-  --text-subheading: clamp(1.25rem, calc(0.849rem + 1.556vw), 2.25rem); /* min: 20px, max: 36px */
-  --text-subheading--font-weight: 500;
+  /* Subheading 20px @ 412px, 36px @ 1440px*/
+  --text-subheading: clamp(1.25rem, calc(1rem + 2vmin), 2.25rem);
+  --text-subheading--font-weight: 400;
   --text-subheading--line-height: 1.2;
 
   /* Card title 22 px @ 412, 36px @ 1440px */
