@@ -18,13 +18,19 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
   </SectionBanner>
 
   <Container class="py-2 px-4">
-    <div class="grid grid-cols-3 md:grid-cols-4 gap-x-2.5 gap-y-2.5 md:gap-x-4 md:gap-y-4">
+    <div
+      class="grid grid-cols-3 justify-center md:max-w-lg lg:max-w-2xl xl:max-w-xl 2xl:max-w-3xl mx-auto gap-x-3 gap-y-3 md:gap-x-7 md:gap-y-7"
+    >
       <WorkToolCard svgBg="bg-[#a7f175]" title="Affinity">
         <AffinityIcon />
       </WorkToolCard>
 
       <WorkToolCard title="CorelDraw">
         <CorelDrawIcon />
+      </WorkToolCard>
+
+      <WorkToolCard title="Figma">
+        <FigmaIcon />
       </WorkToolCard>
     </div>
   </Container>
