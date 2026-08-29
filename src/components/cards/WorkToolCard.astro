@@ -1,10 +1,10 @@
 ---
 interface Props {
   title: string;
-  tileBg?: string;
+  svgBg?: string;
 }
 
-const { title, tileBg = "bg-card-work-tools" } = Astro.props;
+const { title, svgBg = "bg-card-work-tools" } = Astro.props;
 ---
 
 <div
@@ -12,7 +12,7 @@ const { title, tileBg = "bg-card-work-tools" } = Astro.props;
   lg:rounded-xl shadow-md md:shadow-lg shadow-card-shadow-color transition-colors`}
 >
   <strong class="text-card-title text-body-color">{title}</strong>
-  <div class={`w-[70%] h-auto ${tileBg}`}>
+  <div class:list={`w-[70%] h-auto rounded-lg ${svgBg}`}>
     <slot />
   </div>
 </div>
