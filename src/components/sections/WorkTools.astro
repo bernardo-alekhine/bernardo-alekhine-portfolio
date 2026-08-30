@@ -2,6 +2,7 @@
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
+import WorkToolsGrid from "../WorkToolsGrid.astro";
 import WorkToolCard from "../cards/WorkToolCard.astro";
 import AffinityIcon from "../icons/work-tools/Affinity.astro";
 import AstroIcon from "../icons/work-tools/Astro.astro";
@@ -17,22 +18,22 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
     <h4 class="text-heading text-body-color w-full">Minhas Ferramentas de Trabalho</h4>
   </SectionBanner>
 
-  <Container class="flex flex-col text-center gap-6 py-8 px-4">
-    <strong class="text-subheading font-medium tracking-wide text-body-color">Design Gráfico</strong>
-    <div
-      class="grid grid-cols-3 justify-items-center md:max-w-lg lg:max-w-2xl xl:max-w-xl 2xl:max-w-3xl mx-auto gap-x-3 gap-y-3 md:gap-x-8 md:gap-y-8"
-    >
-      <WorkToolCard svgBg="bg-[#a7f175]" title="Affinity">
-        <AffinityIcon />
-      </WorkToolCard>
+  <Container class="flex flex-col text-center gap-6">
+    <div class="flex flex-col py-8 px-4 gap-6">
+      <strong class="text-subheading font-medium tracking-wide text-body-color">Design Gráfico</strong>
+      <WorkToolsGrid gridCols="grid-cols-3">
+        <WorkToolCard svgBg="bg-[#a7f175]" title="Affinity">
+          <AffinityIcon />
+        </WorkToolCard>
 
-      <WorkToolCard title="CorelDraw">
-        <CorelDrawIcon />
-      </WorkToolCard>
+        <WorkToolCard title="CorelDraw">
+          <CorelDrawIcon />
+        </WorkToolCard>
 
-      <WorkToolCard title="Figma">
-        <FigmaIcon />
-      </WorkToolCard>
+        <WorkToolCard title="Figma">
+          <FigmaIcon />
+        </WorkToolCard>
+      </WorkToolsGrid>
     </div>
   </Container>
 </Section>
