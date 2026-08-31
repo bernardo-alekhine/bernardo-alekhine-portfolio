@@ -2,13 +2,14 @@
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
-import WorkToolsGrid from "../WorkToolsGrid.astro";
+import WorkToolsContainer from "../WorkToolsContainer.astro";
 import WorkToolCard from "../cards/WorkToolCard.astro";
 import AffinityIcon from "../icons/work-tools/Affinity.astro";
 import AstroIcon from "../icons/work-tools/Astro.astro";
 import CorelDrawIcon from "../icons/work-tools/CorelDraw.astro";
 import FigmaIcon from "../icons/work-tools/Figma.astro";
 import PythonIcon from "../icons/work-tools/Python.astro";
+import JavaScriptIcon from "../icons/work-tools/JavaScript.astro";
 import SQLIcon from "../icons/work-tools/SQL.astro";
 import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
 ---
@@ -21,7 +22,7 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
   <Container class="flex flex-col text-center gap-6">
     <div class="flex flex-col py-8 px-4 gap-6">
       <strong class="text-subheading font-medium tracking-wide text-body-color">Design Gráfico</strong>
-      <WorkToolsGrid gridCols="grid-cols-3">
+      <WorkToolsContainer>
         <WorkToolCard svgBg="bg-[#a7f175]" title="Affinity">
           <AffinityIcon />
         </WorkToolCard>
@@ -33,7 +34,20 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
         <WorkToolCard title="Figma">
           <FigmaIcon />
         </WorkToolCard>
-      </WorkToolsGrid>
+      </WorkToolsContainer>
+    </div>
+
+    <div class="flex flex-col py-8 px-4 gap-6">
+      <strong class="text-subheading font-medium tracking-wide text-body-color">Desenvolvimento</strong>
+      <WorkToolsContainer>
+        <WorkToolCard title="Python">
+          <PythonIcon />
+        </WorkToolCard>
+
+        <WorkToolCard svgBg="bg-[#f0db4f]" title="JavaScript">
+          <JavaScriptIcon />
+        </WorkToolCard>
+      </WorkToolsContainer>
     </div>
   </Container>
 </Section>
