@@ -7,7 +7,9 @@ import WorkToolCard from "../cards/WorkToolCard.astro";
 import AffinityIcon from "../icons/work-tools/Affinity.astro";
 import AstroIcon from "../icons/work-tools/Astro.astro";
 import CorelDrawIcon from "../icons/work-tools/CorelDraw.astro";
+import DockerIcon from "../icons/work-tools/Docker.astro";
 import FigmaIcon from "../icons/work-tools/Figma.astro";
+import GitHubIcon from "../icons/GitHub.astro";
 import PythonIcon from "../icons/work-tools/Python.astro";
 import JavaScriptIcon from "../icons/work-tools/JavaScript.astro";
 import SQLIcon from "../icons/work-tools/SQL.astro";
@@ -20,10 +22,10 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
   </SectionBanner>
 
   <Container class="flex flex-col text-center gap-6">
-    <div class="flex flex-col py-8 px-4 gap-6">
+    <div class="flex flex-col py-8 px-2 gap-6">
       <strong class="text-subheading font-medium tracking-wide text-body-color">Design Gráfico</strong>
       <WorkToolsContainer>
-        <WorkToolCard svgBg="bg-[#a7f175]" title="Affinity">
+        <WorkToolCard title="Affinity">
           <AffinityIcon />
         </WorkToolCard>
 
@@ -37,15 +39,35 @@ import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
       </WorkToolsContainer>
     </div>
 
-    <div class="flex flex-col py-8 px-4 gap-6">
+    <div class="flex flex-col py-8 px-2 gap-6">
       <strong class="text-subheading font-medium tracking-wide text-body-color">Desenvolvimento</strong>
       <WorkToolsContainer>
         <WorkToolCard title="Python">
           <PythonIcon />
         </WorkToolCard>
 
-        <WorkToolCard svgBg="bg-[#f0db4f]" title="JavaScript">
+        <WorkToolCard title="JavaScript">
           <JavaScriptIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="SQL">
+          <SQLIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Astro">
+          <AstroIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Tailwind CSS">
+          <TailwindIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Docker">
+          <DockerIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="GitHub">
+          <GitHubIcon />
         </WorkToolCard>
       </WorkToolsContainer>
     </div>
