@@ -1,0 +1,75 @@
+---
+import Section from "../Section.astro";
+import Container from "../Container.astro";
+import SectionBanner from "../SectionBanner.astro";
+import WorkToolsContainer from "../WorkToolsContainer.astro";
+import WorkToolCard from "../cards/WorkToolCard.astro";
+import AffinityIcon from "../icons/work-tools/Affinity.astro";
+import AstroIcon from "../icons/work-tools/Astro.astro";
+import CorelDrawIcon from "../icons/work-tools/CorelDraw.astro";
+import DockerIcon from "../icons/work-tools/Docker.astro";
+import FigmaIcon from "../icons/work-tools/Figma.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import PythonIcon from "../icons/work-tools/Python.astro";
+import JavaScriptIcon from "../icons/work-tools/JavaScript.astro";
+import SQLIcon from "../icons/work-tools/SQL.astro";
+import TailwindIcon from "../icons/work-tools/TailwindCSS.astro";
+---
+
+<Section id="work-tools">
+  <SectionBanner class="bg-section-banner">
+    <h4 class="text-heading text-body-color w-full">Minhas Ferramentas de Trabalho</h4>
+  </SectionBanner>
+
+  <Container class="flex flex-col text-center gap-6">
+    <div class="flex flex-col py-8 px-2 gap-6">
+      <strong class="text-subheading font-medium tracking-wide text-body-color">Design Gráfico</strong>
+      <WorkToolsContainer>
+        <WorkToolCard title="Affinity">
+          <AffinityIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="CorelDraw">
+          <CorelDrawIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Figma">
+          <FigmaIcon />
+        </WorkToolCard>
+      </WorkToolsContainer>
+    </div>
+
+    <div class="flex flex-col py-8 px-2 gap-6">
+      <strong class="text-subheading font-medium tracking-wide text-body-color">Desenvolvimento</strong>
+      <WorkToolsContainer>
+        <WorkToolCard title="Python">
+          <PythonIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="JavaScript">
+          <JavaScriptIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="SQL">
+          <SQLIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Astro">
+          <AstroIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Tailwind CSS">
+          <TailwindIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="Docker">
+          <DockerIcon />
+        </WorkToolCard>
+
+        <WorkToolCard title="GitHub">
+          <GitHubIcon />
+        </WorkToolCard>
+      </WorkToolsContainer>
+    </div>
+  </Container>
+</Section>

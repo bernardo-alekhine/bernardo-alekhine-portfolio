@@ -31,7 +31,7 @@
   --color-card-project: var(--cards-project-bg);
   --color-card-contact: var(--cards-contact-bg);
   --color-card-shadow-color: var(--card-shadow-color);
-  --color-card-skills-badge: var(--cards-skills-badge-bg);
+  --color-card-work-tools: var(--card-work-tools);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
   /* Global toast layer */
@@ -67,7 +67,7 @@
   --cards-skills-brand-fg: var(--white);
   --cards-project-bg: var(--white);
   --cards-contact-bg: var(--white);
-  --cards-skills-badge-bg: #0b090b;
+  --card-work-tools: #0b090b;
   --button-primary-bg: var(--brand);
   --button-outline-text-color: var(--brand);
   --button-primary-hover: #5060f7;

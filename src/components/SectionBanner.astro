@@ -1,8 +1,10 @@
 ---
 import Container from "./Container.astro";
+
+const { class: className } = Astro.props;
 ---
 
-<div class="w-full bg-section-banner">
+<div class:list={["w-full", className]}>
   <Container class="flex flex-col items-center gap-4 py-8 px-10 xl:px-16 text-center">
     <slot />
   </Container>
