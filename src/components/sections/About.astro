@@ -1,0 +1,30 @@
+---
+import Section from "../Section.astro";
+import Container from "../Container.astro";
+import SectionBanner from "../SectionBanner.astro";
+---
+
+<Section class="gap-8">
+  <SectionBanner class="bg-section-banner">
+    <h5 class="text-heading text-brand">Sobre Mim</h5>
+  </SectionBanner>
+  <Container>
+    <!-- TODO set responsive max width to have some breathing room from edges -->
+    <div class="max-w-2xl flex flex-col gap-4 mx-auto">
+      <p class="text-lead text-body-color">
+        Sou estudante de Análise e Desenvolvimento de Sistemas e combino a lógica estruturada da TI com a criatividade
+        do Design Gráfico. Minha experiência profissional em suporte e manutenção de informática me permitiu desenvolver
+        a disciplina e a maturidade necessárias para entregar projetos organizados e focados em resultados.
+      </p>
+
+      <p class="text-lead text-body-color">
+        Aliando essa bagagem prática ao domínio de ferramentas vetoriais e ao inglês avançado, que me permite acompanhar
+        tendências internacionais, desenvolvo layouts, marcas e peças de comunicação visual de forma ágil e precisa.
+      </p>
+
+      <p class="text-lead text-body-color">
+        Quer entender mais sobre minha formação técnica, métricas e histórico profissional?
+      </p>
+    </div>
+  </Container>
+</Section>
