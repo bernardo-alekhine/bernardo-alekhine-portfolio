@@ -1,46 +1,43 @@
-# Astro Starter Kit: Basics
+# Bernardo Alekhine Personal Portfolio Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome! This is the repository for my personal portfolio website, designed and built to showcase my work in software
+development, user interface design, and commercial visual identity.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About the Project
 
-## 🚀 Project Structure
+I built this portfolio to serve as a fast, accessible, and visual hub for both local clients and recruiters. My goal was
+to create a site that reflects my hybrid approach: combining structured computational logic with clean graphic design.
 
-Inside of your Astro project, you'll see the following folders and files:
+### Key Highlights
+
+- **Performance First:** Lightweight static output with fast loading times.
+- **Hybrid Focus:** Structured sections highlighting both full-stack code projects and visual design assets.
+- **Responsive Layout:** Fluid containers and custom breakpoints optimized across mobile, tablet, and ultra-wide displays.
+
+## 🛠️ Tech Stack & Tools
+
+- **Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language:** TypeScript / JavaScript
+- **Design & Assets:** Affinity, Figma
+- **Deployment:** Vercel
+
+## 📁 Project Structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+.
+├── 📁 src /
+│   ├── 📁 assets/       # Profile media, static images, and visual components
+│   ├── 📁 components/   # Reusable UI components (Container, Buttons, Skill Grids)
+│   ├── 📁 layouts/      # Base HTML page structures
+│   ├── 📁 pages/        # Route pages (Home, About, Projects)
+│   └── 📁 styles/       # Global CSS imports and Tailwind @theme variables
+├── 📁 public/           # Static media, icons, and branding assets
+├── 📄 astro.config.mjs
+├── 📄 eslint.config.js
+├── 📄 LICENSE
+├── 📄 package-lock.json
+├── 📄 package.json
+├── 📄 README.md
+└── 📄 tsconfig.json
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
