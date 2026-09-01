@@ -4,13 +4,14 @@ import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
 import LinkButton from "../actions/LinkButton.astro";
 import ArrowIcon from "../icons/Arrow.astro";
+import WorkToolsSection from "../sections/WorkTools.astro";
 ---
 
 <Section class="gap-8">
   <SectionBanner class="bg-section-banner">
-    <h5 class="text-heading text-brand">Sobre Mim</h5>
+    <h4 class="text-heading text-brand">Sobre Mim</h4>
   </SectionBanner>
-  <Container class="flex flex-col items-center">
+  <Container class="flex flex-col items-center gap-4">
     <div class="flex flex-col items-center gap-8 md:gap-10 max-w-90 md:max-w-135 lg:max-w-200 2xl:max-w-250">
       <div class="flex flex-col gap-4 mx-auto">
         <p class="text-lead text-body-color">
@@ -28,16 +29,19 @@ import ArrowIcon from "../icons/Arrow.astro";
           acompanhar tendências internacionais, desenvolvo layouts, marcas e peças de comunicação visual de forma ágil e
           precisa.
         </p>
-
-        <p class="text-lead text-body-color">
-          Quer entender mais sobre minha formação técnica, métricas e histórico profissional?
-        </p>
       </div>
+    </div>
 
-      <LinkButton href="/profile" variant="solid">
-        <span>Veja meu perfil completo</span>
-        <ArrowIcon class="text-button-text-color" />
-      </LinkButton>
+    <div class="flex flex-col gap-4 md:gap-6 items-center">
+      <WorkToolsSection />
+      <div class="flex flex-col gap-6 md:gap-8 max-w-90 md:max-w-135 lg:max-w-200 2xl:max-w-250">
+        <p class="text-subheading text-center text-body-color">Quer saber mais sobre a minha trajetória e formação?</p>
+
+        <LinkButton href="/profile" variant="solid">
+          <span>Veja meu perfil completo</span>
+          <ArrowIcon class="text-button-text-color" />
+        </LinkButton>
+      </div>
     </div>
   </Container>
 </Section>
