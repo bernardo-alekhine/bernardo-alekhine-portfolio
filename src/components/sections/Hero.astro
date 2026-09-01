@@ -9,7 +9,7 @@ import ArrowIcon from "../icons/Arrow.astro";
 import DownArrow from "../actions/DownArrow.astro";
 ---
 
-<Section class="min-h-screen min-h-[100dvh] flex flex-col justify-center 2xl:gap-6" id="hero">
+<Section class="min-h-dvh flex flex-col justify-center 2xl:gap-6" id="hero">
   <Container class="xl:max-w-[90%] px-4 xl:px-8">
     <div>
       <div class="flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between">
@@ -18,11 +18,11 @@ import DownArrow from "../actions/DownArrow.astro";
             src={heroProfile}
             alt="Bernardo Alekhine profile with graphic curves"
             loading="eager"
-            class="w-[clamp(310px,76vmin,600px)] max-w-[450px] xl:max-w-[600px] aspect-square select-none"
+            class="w-[clamp(310px,76vmin,600px)] max-w-112.5 xl:max-w-150 aspect-square select-none"
           />
         </div>
         <div
-          class="w-full flex-1 flex flex-col max-w-[440px] lg:max-w-[500px] 2xl:max-w-[650px] justify-center items-center gap-4 lg:gap-5"
+          class="w-full flex-1 flex flex-col max-w-110 lg:max-w-125 2xl:max-w-162.5 justify-center items-center gap-4 lg:gap-5"
         >
           <h1 class="max-w-[20ch] text-display text-body-color text-center">
             Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional de TI
