@@ -2,32 +2,42 @@
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
+import LinkButton from "../actions/LinkButton.astro";
+import ArrowIcon from "../icons/Arrow.astro";
 ---
 
 <Section class="gap-8">
   <SectionBanner class="bg-section-banner">
     <h5 class="text-heading text-brand">Sobre Mim</h5>
   </SectionBanner>
-  <Container>
-    <div class="max-w-xs md:max-w-3xl flex flex-col gap-4 mx-auto">
-      <p class="text-lead text-body-color">
-        Sou estudante de Análise e Desenvolvimento de Sistemas e combino a lógica estruturada da TI com a criatividade
-        do Design Gráfico.
-      </p>
+  <Container class="flex flex-col items-center">
+    <div class="flex flex-col items-center gap-8 md:gap-10 max-w-90 md:max-w-135 lg:max-w-200 2xl:max-w-250">
+      <div class="flex flex-col gap-4 mx-auto">
+        <p class="text-lead text-body-color">
+          Sou estudante de Análise e Desenvolvimento de Sistemas e combino a lógica estruturada da TI com a criatividade
+          do Design Gráfico.
+        </p>
 
-      <p class="text-lead text-body-color">
-        Minha experiência profissional em suporte e manutenção de informática me permitiu desenvolver a disciplina e a
-        maturidade necessárias para entregar projetos organizados e focados em resultados.
-      </p>
+        <p class="text-lead text-body-color">
+          Minha experiência profissional em suporte e manutenção de informática me permitiu desenvolver a disciplina e a
+          maturidade necessárias para entregar projetos organizados e focados em resultados.
+        </p>
 
-      <p class="text-lead text-body-color">
-        Aliando essa bagagem prática ao domínio de ferramentas vetoriais e ao inglês avançado, que me permite acompanhar
-        tendências internacionais, desenvolvo layouts, marcas e peças de comunicação visual de forma ágil e precisa.
-      </p>
+        <p class="text-lead text-body-color">
+          Aliando essa bagagem prática ao domínio de ferramentas vetoriais e ao inglês avançado, que me permite
+          acompanhar tendências internacionais, desenvolvo layouts, marcas e peças de comunicação visual de forma ágil e
+          precisa.
+        </p>
 
-      <p class="text-lead text-body-color">
-        Quer entender mais sobre minha formação técnica, métricas e histórico profissional?
-      </p>
+        <p class="text-lead text-body-color">
+          Quer entender mais sobre minha formação técnica, métricas e histórico profissional?
+        </p>
+      </div>
+
+      <LinkButton href="/profile" variant="solid">
+        <span>Veja meu perfil completo</span>
+        <ArrowIcon class="text-button-text-color" />
+      </LinkButton>
     </div>
   </Container>
 </Section>
