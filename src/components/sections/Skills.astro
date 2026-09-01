@@ -5,7 +5,7 @@ import SectionBanner from "../SectionBanner.astro";
 import SkillCard from "../cards/SkillCard.astro";
 ---
 
-<Section id="skills">
+<Section class="gap-4 md:gap-10" id="skills">
   <SectionBanner class="bg-section-banner">
     <h3 class="text-heading text-body-color w-full">Serviços e Especialidades</h3>
     <p class="text-lead text-body-color w-full">
@@ -14,9 +14,7 @@ import SkillCard from "../cards/SkillCard.astro";
     </p>
   </SectionBanner>
   <Container>
-    <div
-      class="grid grid-cols px-5 py-4 gap-y-8 md:grid-cols-2 sm:px-8 md:px-10 lg:px-12 md:gap-x-16 md:gap-y-12 md:py-10"
-    >
+    <div class="grid grid-cols px-5 gap-y-8 md:grid-cols-2 sm:px-8 md:px-10 lg:px-12 md:gap-x-16 md:gap-y-12">
       <SkillCard class="bg-card-skills-brand text-white md:order-1">
         <div class="w-[70%] h-auto">
           <svg
