@@ -32,12 +32,16 @@ import DownArrow from "../actions/DownArrow.astro";
             forma clara e impactante.
           </p>
           <div class="w-full flex flex-col justify-center items-center gap-3 py-5 lg:py-1" id="buttons">
-            <LinkButton href="/project-gallery" variant="solid">
-              <span>Ver Projetos</span>
+            <LinkButton title="Ver Projetos" href="/project-gallery" variant="solid">
               <ArrowIcon class="text-button-text-color" />
             </LinkButton>
-            <LinkButton href="https://wa.me/5538998552879" target="_blank" rel="noopener noreferrer" variant="outline">
-              <span>Falar no WhatsApp</span>
+            <LinkButton
+              title="Falar no WhatsApp"
+              href="https://wa.me/5538998552879"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outline"
+            >
               <WhatsAppIcon class="fill-current" />
             </LinkButton>
           </div>

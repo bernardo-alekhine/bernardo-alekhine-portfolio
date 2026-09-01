@@ -3,9 +3,10 @@ import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"a"> {
   variant?: "solid" | "outline";
+  title?: string;
 }
 
-const { href = "#", variant = "solid", class: className, ...restProps } = Astro.props;
+const { title, href = "#", variant = "solid", class: className, ...restProps } = Astro.props;
 
 // TODO: Decrease padding and remove large fixed size button width, use percentage to fit parent container intstead
 const baseStyles = `
@@ -33,5 +34,6 @@ const variantClasses = {
 ---
 
 <a href={href} draggable="false" class:list={[baseStyles, variantClasses[variant], className]} {...restProps}>
+  <span>{title}</span>
   <slot />
 </a>
