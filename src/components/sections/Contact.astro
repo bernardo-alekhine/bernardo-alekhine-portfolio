@@ -5,7 +5,7 @@ import SectionBanner from "../SectionBanner.astro";
 import ContactItem from "../actions/ContactItem.astro";
 import WhatsAppIcon from "../icons/contact/WhatsAppLogo.astro";
 import LinkedInIcon from "../icons/contact/LinkedIn.astro";
-import Email from "../icons/contact/Email.astro";
+import EmailIcon from "../icons/contact/Email.astro";
 import GitHubIcon from "../icons/GitHub.astro";
 ---
 
@@ -21,6 +21,7 @@ import GitHubIcon from "../icons/GitHub.astro";
       px-2 py-2 gap-2 md:px-4 md:py-4 md:gap-x-6 md:gap-y-6"
     >
       <ContactItem
+        as="a"
         value="+55 38 99855-2879"
         target="_blank"
         rel="noopener noreferrer"
@@ -29,9 +30,12 @@ import GitHubIcon from "../icons/GitHub.astro";
         <WhatsAppIcon />
       </ContactItem>
 
-      <!-- TODO Email icon and move copy email toast to layout as centralized component -->
+      <ContactItem as="button" value="alekhinebernardo@gmail.com" data-copy-email="alekhinebernardo@gmail.com">
+        <EmailIcon />
+      </ContactItem>
 
       <ContactItem
+        as="a"
         value="in/bernardo-alekhine"
         target="_blank"
         rel="noopener noreferrer"
@@ -41,6 +45,7 @@ import GitHubIcon from "../icons/GitHub.astro";
       </ContactItem>
 
       <ContactItem
+        as="a"
         value="github.com/bernardo-alekhine"
         target="_blank"
         rel="noopener noreferrer"
