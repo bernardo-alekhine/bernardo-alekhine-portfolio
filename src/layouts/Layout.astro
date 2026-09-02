@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import CopyEmailToast from "../components/CopyEmailToast.astro";
 
 interface Props {
   title?: string;
@@ -37,5 +38,8 @@ const { title = "Default Title", class: className } = Astro.props;
     <Navbar />
     <slot />
     <Footer />
+    <div id="toast-container" transition:persist aria-live="polite" aria-atomic="true">
+      <CopyEmailToast />
+    </div>
   </body>
 </html>

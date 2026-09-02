@@ -1,7 +1,3 @@
----
-import CopyEmailButton from "./actions/CopyEmailButton.astro";
----
-
 <footer
   class="w-full flex flex-col justify-between items-center gap-8 lg:gap-10 px-6 lg:px-24 py-16 pb-26 lg:pb-12 bg-footer-bg"
 >
@@ -37,11 +33,12 @@ import CopyEmailButton from "./actions/CopyEmailButton.astro";
       >
         GitHub
       </a>
-      <CopyEmailButton
-        email="alekhinebernardo@gmail.com"
-        label="Copiar Email"
-        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200"
-      />
+      <button
+        data-copy-email="alekhinebernardo@gmail.com"
+        class="text-footer-link text-brand hover:text-brand-hover transition-colors duration-200 cursor-pointer"
+      >
+        Copiar Email
+      </button>
     </div>
 
     <div class="hidden md:flex flex-col items-start gap-4">
