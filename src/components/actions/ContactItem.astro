@@ -6,18 +6,19 @@ interface Props extends HTMLAttributes<"a"> {
   href?: string;
 }
 
-const { href, value } = Astro.props;
+const { href, value, ...restProps } = Astro.props;
 ---
 
 <a
   href={href}
   class="px-3 py-3
-  w-full flex flex-1 flex-row gap-2
-  justify-center items-center rounded-2xl
-  text-body-color hover:bg-button-outline-hover duration-200 transition-colors"
+    w-full flex flex-row gap-2
+    justify-start items-center rounded-2xl
+    text-body-color hover:bg-button-outline-hover duration-200 transition-colors"
+  {...restProps}
 >
   <div class="w-10 h-10 md:w-14 md:h-14 shrink-0 flex items-center justify-center select-none">
     <slot />
   </div>
-  <span class="text-lead">{value}</span>
+  <span class="min-w-0 text-lead">{value}</span>
 </a>

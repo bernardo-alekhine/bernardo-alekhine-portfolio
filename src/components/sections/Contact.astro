@@ -15,10 +15,10 @@ import GitHubIcon from "../icons/GitHub.astro";
   </SectionBanner>
   <Container class="flex flex-col items-center">
     <div
-      class="grid grid-cols-1 md:grid-cols-2 justify-center
+      class="grid grid-cols-1 md:grid-cols-2
       shadow-md shadow-card-shadow-color border border-card-shadow-color/50
       rounded-lg lg:rounded-xl
-      px-2 py-2 gap-2 md:px-4 md:py-4 md:gap-30"
+      px-2 py-2 gap-2 md:px-4 md:py-4 md:gap-x-6 md:gap-y-6"
     >
       <ContactItem
         value="+55 38 99855-2879"
@@ -27,6 +27,26 @@ import GitHubIcon from "../icons/GitHub.astro";
         href="https://wa.me/5538998552879"
       >
         <WhatsAppIcon />
+      </ContactItem>
+
+      <!-- TODO Email icon and move copy email toast to layout as centralized component -->
+
+      <ContactItem
+        value="in/bernardo-alekhine"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://linkedin.com/in/bernardo-alekhine"
+      >
+        <LinkedInIcon />
+      </ContactItem>
+
+      <ContactItem
+        value="github.com/bernardo-alekhine"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/bernardo-alekhine"
+      >
+        <GitHubIcon />
       </ContactItem>
     </div>
   </Container>
