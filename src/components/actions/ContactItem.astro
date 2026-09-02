@@ -1,0 +1,20 @@
+---
+import type { Polymorphic } from "astro/types";
+
+type Props<Tag extends "a" | "button"> = Polymorphic<{ as: Tag; value: string }>;
+
+const { value, as: Tag, ...props } = Astro.props;
+---
+
+<Tag
+  {...props}
+  class="px-3 py-3
+    w-full flex flex-row gap-2
+    justify-start items-center rounded-2xl
+    text-body-color hover:bg-button-outline-hover duration-200 transition-colors cursor-pointer"
+>
+  <div class="w-10 h-10 md:w-14 md:h-14 shrink-0 flex items-center justify-center select-none">
+    <slot />
+  </div>
+  <span class="min-w-0 text-lead">{value}</span>
+</Tag>
