@@ -76,16 +76,16 @@ export const skills = [
           "profissional. Espanhol básico.",
       },
       {
-        label: "Frameworks & Bibliotecas",
+        label: "Foco na Eficiência",
         content:
-          "Experiência prática no desenvolvimento de aplicações com Astro, Tailwind e Django. E exposição a " +
-          "bibliotecas como Flask, Pandas, NumPy e Matplotlib.",
+          "Mentalidade ágil voltada para o progresso de projetos, priorizando soluções funcionais, criativas " +
+          "e consistentes.",
       },
       {
-        label: "Boas Práticas & Infraestrutura",
+        label: "Resolução Estruturada de Problemas",
         content:
-          "Aplicação de conceitos de Programação Orientada a Objetos (OOP), CI/CD, modelagem de banco " +
-          "de dados, Engenharia de Requisitos, versionamento com Git/GitHub e conteinerização com Docker.",
+          "Autonomia e aprendizado rápido para absorver novas ferramentas ou regras de negócios, mantendo a " +
+          "organização mesmo sob alta demanda.",
       },
     ],
   },
