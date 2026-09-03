@@ -13,8 +13,12 @@ import SkillCard from "../cards/SkillCard.astro";
       acabamento pronto para mídias digitais ou impressas.
     </p>
   </SectionBanner>
-  <Container>
-    <div class="grid grid-cols px-5 gap-y-8 md:grid-cols-2 sm:px-8 md:px-10 lg:px-12 md:gap-x-16 md:gap-y-12">
+  <Container class="flex flex-col items-center">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2
+      px-5 gap-y-8 sm:px-8 md:gap-x-6 md:gap-y-6 lg:px-12 lg:gap-x-12 lg:gap-y-12
+      sm:max-w-md md:max-w-6xl xl:max-w-6xl 2xl:max-w-360"
+    >
       <SkillCard class="bg-card-skills-brand text-white md:order-1">
         <div class="w-[70%] h-auto">
           <svg
