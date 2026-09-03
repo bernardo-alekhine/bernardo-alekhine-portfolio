@@ -3,6 +3,10 @@
 @import "./token-colors.css";
 @import "./typography.css";
 
+@theme {
+  --font-sans: "Inter Variable", "Inter", sans-serif;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
