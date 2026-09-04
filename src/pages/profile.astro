@@ -5,8 +5,10 @@ import Container from "../components/Container.astro";
 import SectionBanner from "../components/SectionBanner.astro";
 import EducationItem from "../components/profile/EducationItem.astro";
 import ExperienceItem from "../components/profile/ExperienceItem.astro";
+import SkillItem from "../components/profile/SkillItem.astro";
 import { education } from "../data/profile/education.ts";
 import { experience } from "../data/profile/experience.ts";
+import { skills } from "../data/profile/skills.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
@@ -21,13 +23,13 @@ import { experience } from "../data/profile/experience.ts";
   </SectionBanner>
   <main class="flex-1 flex flex-col gap-1">
     <Section>
-      <Container class="flex flex-col gap-3 px-10 xl:px-16">
+      <Container class="flex flex-1 flex-col gap-4 px-10 xl:px-16">
         <h2 class="text-heading text-body-color">Educação</h2>
         {education.map((item) => <EducationItem {...item} />)}
       </Container>
     </Section>
     <Section>
-      <Container class="flex flex-col gap-3 px-10 xl:px-16">
+      <Container class="flex flex-col gap-4 px-10 xl:px-16">
         <h3 class="text-heading text-body-color">Experiência Profissional</h3>
         <div class="flex flex-col gap-8">
           {experience.map((item) => <ExperienceItem {...item} />)}
@@ -35,4 +37,13 @@ import { experience } from "../data/profile/experience.ts";
       </Container>
     </Section>
   </main>
+
+  <Section>
+    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+      <h4 class="text-heading text-body-color">Habilidades</h4>
+      <div class="flex flex-col gap-8">
+        {skills.map((item) => <SkillItem {...item} />)}
+      </div>
+    </Container>
+  </Section>
 </Layout>
