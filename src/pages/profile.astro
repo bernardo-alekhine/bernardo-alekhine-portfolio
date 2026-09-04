@@ -4,7 +4,9 @@ import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
 import SectionBanner from "../components/SectionBanner.astro";
 import EducationItem from "../components/profile/EducationItem.astro";
+import ExperienceItem from "../components/profile/ExperienceItem.astro";
 import { education } from "../data/profile/education.ts";
+import { experience } from "../data/profile/experience.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
@@ -17,11 +19,19 @@ import { education } from "../data/profile/education.ts";
       e precisa.
     </p>
   </SectionBanner>
-  <main class="flex-1 flex flex-col">
+  <main class="flex-1 flex flex-col gap-1">
     <Section>
       <Container class="flex flex-col gap-3 px-10 xl:px-16">
         <h2 class="text-heading text-body-color">Educação</h2>
         {education.map((item) => <EducationItem {...item} />)}
+      </Container>
+    </Section>
+    <Section>
+      <Container class="flex flex-col gap-3 px-10 xl:px-16">
+        <h3 class="text-heading text-body-color">Experiência Profissional</h3>
+        <div class="flex flex-col gap-8">
+          {experience.map((item) => <ExperienceItem {...item} />)}
+        </div>
       </Container>
     </Section>
   </main>
