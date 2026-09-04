@@ -1,0 +1,29 @@
+---
+interface Highlight {
+  label: string;
+  content: string;
+}
+
+interface Props {
+  title: string;
+  highlights: Highlight[];
+}
+
+const { title, highlights } = Astro.props;
+---
+
+<div class="flex flex-col gap-3">
+  <p><strong class="text-profile-item-title text-body-color">{title}</strong></p>
+  <ul class="flex flex-col gap-1">
+    {
+      highlights.map((item) => (
+        <li
+          class="
+        list-disc list-outside text-main-body text-body-color"
+        >
+          <span class="font-semibold">{item.label}</span>: {item.content}
+        </li>
+      ))
+    }
+  </ul>
+</div>

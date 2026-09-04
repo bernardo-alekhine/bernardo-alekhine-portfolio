@@ -29,6 +29,7 @@ to create a site that reflects my hybrid approach: combining structured computat
 ├── 📁 src /
 │   ├── 📁 assets/       # Profile media, static images, and visual components
 │   ├── 📁 components/   # Reusable UI components (Container, Buttons, Skill Grids)
+│   ├── 📁 data/         # Content to be rendered on website (projects, profile experience, etc)
 │   ├── 📁 layouts/      # Base HTML page structures
 │   ├── 📁 pages/        # Route pages (Home, About, Projects)
 │   └── 📁 styles/       # Global CSS imports and Tailwind @theme variables

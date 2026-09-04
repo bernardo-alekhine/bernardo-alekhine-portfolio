@@ -1,6 +1,4 @@
 @theme {
-  --font-sans: "InterVariable", "Inter", sans-serif;
-
   /* Display 32px @ 412px, 50px @ 1440px*/
   --text-display: clamp(2rem, calc(1.549rem + 2vmin), 3.125rem);
   --text-display--font-weight: 700;
@@ -71,8 +69,13 @@
   --text-image-title--font-weight: 600;
   --text-image-title--line-height: 1.2;
 
-  /* Caption */
-  --text-caption: clamp(0.875rem, calc(0.474rem + 1.556vw), 1.875rem); /* min: 14px, max: 30px */
+  /* Caption 14px @ 412px, 30px @ 1440px */
+  --text-caption: clamp(0.875rem, calc(0.6rem + 1.56vmin), 1.875rem);
   --text-caption--font-weight: 300;
   --text-caption--line-height: 1.5;
+
+  /* Profile Item Title 20px @ 412px, 36px @ 1440px*/
+  --text-profile-item-title: clamp(1.25rem, calc(1rem + 1.5vmin), 2.25rem);
+  --text-profile-item-title--font-weight: 400;
+  --text-profile-item-title--line-height: 1.2;
 }

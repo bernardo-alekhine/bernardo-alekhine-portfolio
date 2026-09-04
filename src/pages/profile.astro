@@ -3,18 +3,81 @@ import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
 import SectionBanner from "../components/SectionBanner.astro";
+import EducationItem from "../components/profile/EducationItem.astro";
+import ExperienceItem from "../components/profile/ExperienceItem.astro";
+import SkillItem from "../components/profile/SkillItem.astro";
+import CertificateItem from "../components/profile/CertificateItem.astro";
+import LinkButton from "../components/actions/LinkButton.astro";
+import ArrowIcon from "../components/icons/Arrow.astro";
+import DownloadResumeIcon from "../components/icons/DownloadResume.astro";
+import { education } from "../data/profile/education.ts";
+import { experience } from "../data/profile/experience.ts";
+import { skills } from "../data/profile/skills.ts";
+import { certificates } from "../data/profile/certificates.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
-  <main class="flex-1 flex flex-col">
-    <SectionBanner>
-      <h1 class="text-left text-heading text-body-color w-full">Perfil</h1>
-      <p class="text-left text-lead text-body-color w-full">
-        Sou estudante de ADS e conecto a lógica da TI à criatividade do Design Gráfico. Minha experiência com suporte e
-        manutenção me trouxe a disciplina ideal para entregar projetos organizados e focados em resultados. Unindo essa
-        bagagem prática ao domínio de ferramentas vetoriais e ao Inglês fluente, desenvolvo layouts e marcas de forma
-        ágil e precisa.
-      </p>
-    </SectionBanner>
+  <SectionBanner class="bg-section-banner mb-10">
+    <h1 class="text-left text-heading text-body-color w-full">Perfil</h1>
+    <p class="text-left text-lead text-body-color w-full">
+      Sou estudante de ADS e conecto a lógica da TI à criatividade do Design Gráfico. Minha experiência com suporte e
+      manutenção me trouxe a disciplina ideal para entregar projetos organizados e focados em resultados. Unindo essa
+      bagagem prática ao domínio de ferramentas vetoriais e ao Inglês fluente, desenvolvo layouts e marcas de forma ágil
+      e precisa.
+    </p>
+  </SectionBanner>
+  <main class="flex-1 flex flex-col gap-1">
+    <Section>
+      <Container class="flex flex-1 flex-col gap-4 px-10 xl:px-16">
+        <h2 class="text-heading text-body-color">Educação</h2>
+        {education.map((item) => <EducationItem {...item} />)}
+      </Container>
+    </Section>
+    <Section>
+      <Container class="flex flex-col gap-4 px-10 xl:px-16">
+        <h3 class="text-heading text-body-color">Experiência Profissional</h3>
+        <div class="flex flex-col gap-8">
+          {experience.map((item) => <ExperienceItem {...item} />)}
+        </div>
+      </Container>
+    </Section>
   </main>
+
+  <Section>
+    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+      <h4 class="text-heading text-body-color">Habilidades</h4>
+      <div class="flex flex-col gap-8">
+        {skills.map((item) => <SkillItem {...item} />)}
+      </div>
+    </Container>
+  </Section>
+
+  <Section>
+    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+      <h5 class="text-heading text-body-color">Certificados</h5>
+      <div class="flex flex-col gap-8">
+        {certificates.map((item) => <CertificateItem {...item} />)}
+      </div>
+    </Container>
+  </Section>
+
+  <Section>
+    <Container
+      class="flex flex-col gap-4 justify-center text-center items-center px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6"
+    >
+      <h6 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h6>
+      <div
+        class="w-full sm:max-w-lg md:max-w-3xl flex flex-col justify-center items-center gap-3 py-5 lg:py-1"
+        id="buttons"
+      >
+        <LinkButton title="Entre em Contato" href="#" variant="solid">
+          <ArrowIcon class="text-button-text-color" />
+        </LinkButton>
+
+        <LinkButton title="Baixar meu Currículo" href="#" variant="outline">
+          <DownloadResumeIcon class="text-brand" />
+        </LinkButton>
+      </div>
+    </Container>
+  </Section>
 </Layout>
