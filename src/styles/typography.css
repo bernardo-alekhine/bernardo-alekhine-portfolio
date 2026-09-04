@@ -70,12 +70,12 @@
   --text-image-title--line-height: 1.2;
 
   /* Caption 14px @ 412px, 30px @ 1440px */
-  --text-caption: clamp(0.875rem, calc(0.55rem + 1.56vmin), 1.875rem);
+  --text-caption: clamp(0.875rem, calc(0.6rem + 1.56vmin), 1.875rem);
   --text-caption--font-weight: 300;
   --text-caption--line-height: 1.5;
 
   /* Profile Item Title 20px @ 412px, 36px @ 1440px*/
-  --text-profile-item-title: clamp(1.25rem, calc(1rem + 1.2vmin), 2.25rem);
+  --text-profile-item-title: clamp(1.25rem, calc(1rem + 1.5vmin), 2.25rem);
   --text-profile-item-title--font-weight: 400;
   --text-profile-item-title--line-height: 1.2;
 }
