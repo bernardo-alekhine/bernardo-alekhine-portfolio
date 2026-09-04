@@ -2,7 +2,7 @@ export const experience = [
   {
     role: "Técnico de Campo - Implantação e Monitoramento de TI",
     company: "Digitec Copiadora e Informática Ltda.",
-    period: "10/2025 — 12/2025",
+    period: "10/2025 a 12/2025",
     location: "Taiobeiras, MG",
     highlights: [
       "Implantação e configuração de software de monitoramento de impressoras em rede em clientes de múltiplas " +
@@ -15,7 +15,7 @@ export const experience = [
   {
     role: "Técnico de Suporte em TI",
     company: "Digitec Copiadora e Informática Ltda.",
-    period: "04/2025 — 08/2025",
+    period: "04/2025 a 08/2025",
     location: "Taiobeiras, MG",
     highlights: [
       "Suporte técnico presencial e remoto a mais de 40 clientes entre órgãos públicos, empresas e pessoas físicas.",
