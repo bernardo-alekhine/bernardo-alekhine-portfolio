@@ -3,18 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
 import SectionBanner from "../components/SectionBanner.astro";
+import EducationItem from "../components/profile/EducationItem.astro";
+import { education } from "../data/profile/education.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
+  <SectionBanner class="bg-section-banner mb-10">
+    <h1 class="text-left text-heading text-body-color w-full">Perfil</h1>
+    <p class="text-left text-lead text-body-color w-full">
+      Sou estudante de ADS e conecto a lógica da TI à criatividade do Design Gráfico. Minha experiência com suporte e
+      manutenção me trouxe a disciplina ideal para entregar projetos organizados e focados em resultados. Unindo essa
+      bagagem prática ao domínio de ferramentas vetoriais e ao Inglês fluente, desenvolvo layouts e marcas de forma ágil
+      e precisa.
+    </p>
+  </SectionBanner>
   <main class="flex-1 flex flex-col">
-    <SectionBanner>
-      <h1 class="text-left text-heading text-body-color w-full">Perfil</h1>
-      <p class="text-left text-lead text-body-color w-full">
-        Sou estudante de ADS e conecto a lógica da TI à criatividade do Design Gráfico. Minha experiência com suporte e
-        manutenção me trouxe a disciplina ideal para entregar projetos organizados e focados em resultados. Unindo essa
-        bagagem prática ao domínio de ferramentas vetoriais e ao Inglês fluente, desenvolvo layouts e marcas de forma
-        ágil e precisa.
-      </p>
-    </SectionBanner>
+    <Section>
+      <Container class="flex flex-col gap-3 px-10 xl:px-16">
+        <h2 class="text-heading text-body-color">Educação</h2>
+        {education.map((item) => <EducationItem {...item} />)}
+      </Container>
+    </Section>
   </main>
 </Layout>
