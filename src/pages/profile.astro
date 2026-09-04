@@ -6,9 +6,11 @@ import SectionBanner from "../components/SectionBanner.astro";
 import EducationItem from "../components/profile/EducationItem.astro";
 import ExperienceItem from "../components/profile/ExperienceItem.astro";
 import SkillItem from "../components/profile/SkillItem.astro";
+import CertificateItem from "../components/profile/CertificateItem.astro";
 import { education } from "../data/profile/education.ts";
 import { experience } from "../data/profile/experience.ts";
 import { skills } from "../data/profile/skills.ts";
+import { certificates } from "../data/profile/certificates.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
@@ -43,6 +45,15 @@ import { skills } from "../data/profile/skills.ts";
       <h4 class="text-heading text-body-color">Habilidades</h4>
       <div class="flex flex-col gap-8">
         {skills.map((item) => <SkillItem {...item} />)}
+      </div>
+    </Container>
+  </Section>
+
+  <Section>
+    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+      <h5 class="text-heading text-body-color">Certificados</h5>
+      <div class="flex flex-col gap-8">
+        {certificates.map((item) => <CertificateItem {...item} />)}
       </div>
     </Container>
   </Section>
