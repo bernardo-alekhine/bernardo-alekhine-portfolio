@@ -30,6 +30,13 @@ const { title = "Default Title", class: className } = Astro.props;
       }
     </script>
 
+    <!-- Scroll to top of page when refreshing tab on route targeting id, e.g: index/#skills"  -->
+    <script is:inline>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.svg" />
   </head>
