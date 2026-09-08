@@ -17,7 +17,6 @@ const isActive = currentPath === targetPath;
 <a
   href={href}
   data-active={isActive}
-  onclick={isActive ? "event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });" : undefined}
   class:list={[
     "group flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor transition-colors w-14 h-14 gap-1 select-none",
     "data-[active=true]:text-brand data-[active=false]:text-body-color",
