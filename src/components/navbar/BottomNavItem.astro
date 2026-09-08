@@ -16,15 +16,21 @@ const isActive = currentPath === targetPath;
 
 <a
   href={href}
+  data-active={isActive}
   class:list={[
-    "flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor transition-colors w-14 h-14 gap-1 select-none",
-    isActive ? "text-brand" : "text-body-color",
+    "group flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor transition-colors w-14 h-14 gap-1 select-none",
+    "data-[active=true]:text-brand data-[active=false]:text-body-color",
     className,
   ]}
   {...restProps}
 >
-  <div class="w-7 h-7 flex items-center justify-center shrink-0 [&>svg]:select-none">
-    {isActive ? <slot name="highlight-icon" /> : <slot name="default-icon" />}
+  <div class="relative w-7 h-7 flex items-center justify-center shrink-0 [&>svg]:select-none">
+    <div class="hidden group-data-[active=true]:block">
+      <slot name="highlight-icon" />
+    </div>
+    <div class="hidden group-data-[active=false]:block">
+      <slot name="default-icon" />
+    </div>
   </div>
   <span>{label}</span>
 </a>
