@@ -18,26 +18,24 @@ const links = [
   </a>
 
   <div class="flex-row items-center gap-10 hidden lg:flex">
-    {
-      links.map(({ href, label }) => {
-        const isActive = currentPath === normalizePath(href);
+    {links.map(({ href, label }) => {
+      const isActive = currentPath === normalizePath(href);
 
-        return (
-          <a
-            draggable="false"
-            href={href}
-            aria-current={isActive ? "page" : undefined}
-            class:list={[
-              "text-top-navbar-anchor text-body-color transition-colors hover:text-brand duration-200 relative pb-3 -mb-3 flex flex-col items-center",
-            ]}
-          >
-            {label}
+      return (
+        <a
+          draggable="false"
+          href={href}
+          aria-current={isActive ? "page" : undefined}
+          class:list={[
+            "text-top-navbar-anchor text-body-color transition-colors hover:text-brand duration-200 relative pb-3 -mb-3 flex flex-col items-center",
+          ]}
+        >
+          {label}
 
-            {isActive && <span class="absolute bottom-1 w-full h-0.5 bg-brand rounded-full" />}
-          </a>
-        );
-      })
-    }
+          {isActive && <span class="absolute bottom-1 w-full h-0.5 bg-brand rounded-full" />}
+        </a>
+      );
+    })}
 
     <a
       draggable="false"
