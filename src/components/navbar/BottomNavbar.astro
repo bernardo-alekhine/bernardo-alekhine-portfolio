@@ -8,7 +8,7 @@ const { class: className, ...props } = Astro.props;
 ---
 
 <nav class:list={["w-full h-15 flex items-center fixed bottom-0 inset-x-0 bg-nav", className]} {...props}>
-  <BottomNavItem label="Início" href="/">
+  <BottomNavItem label="Início" href="/" id="index-navbar-anchor">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -44,7 +44,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Projetos" href="/project-gallery">
+  <BottomNavItem label="Projetos" href="/project-gallery" id="project-gallery-navbar-anchor">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -80,7 +80,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Contato" href="#">
+  <BottomNavItem label="Contato" href="/#contact" id="contact-navbar-anchor">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -116,7 +116,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Perfil" href="/profile">
+  <BottomNavItem label="Perfil" href="/profile" id="profile-navbar-anchor">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
