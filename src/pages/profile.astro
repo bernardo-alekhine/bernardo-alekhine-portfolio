@@ -30,14 +30,18 @@ import { certificates } from "../data/profile/certificates.ts";
     <Section>
       <Container class="flex flex-1 flex-col gap-4 px-10 xl:px-16">
         <h2 class="text-heading text-body-color">Educação</h2>
-        {education.map((item) => <EducationItem {...item} />)}
+        {education.map((item) => (
+          <EducationItem {...item} />
+        ))}
       </Container>
     </Section>
     <Section>
       <Container class="flex flex-col gap-4 px-10 xl:px-16">
         <h3 class="text-heading text-body-color">Experiência Profissional</h3>
         <div class="flex flex-col gap-8">
-          {experience.map((item) => <ExperienceItem {...item} />)}
+          {experience.map((item) => (
+            <ExperienceItem {...item} />
+          ))}
         </div>
       </Container>
     </Section>
@@ -47,7 +51,9 @@ import { certificates } from "../data/profile/certificates.ts";
     <Container class="flex flex-col gap-4 px-10 xl:px-16">
       <h4 class="text-heading text-body-color">Habilidades</h4>
       <div class="flex flex-col gap-8">
-        {skills.map((item) => <SkillItem {...item} />)}
+        {skills.map((item) => (
+          <SkillItem {...item} />
+        ))}
       </div>
     </Container>
   </Section>
@@ -56,15 +62,15 @@ import { certificates } from "../data/profile/certificates.ts";
     <Container class="flex flex-col gap-4 px-10 xl:px-16">
       <h5 class="text-heading text-body-color">Certificados</h5>
       <div class="flex flex-col gap-8">
-        {certificates.map((item) => <CertificateItem {...item} />)}
+        {certificates.map((item) => (
+          <CertificateItem {...item} />
+        ))}
       </div>
     </Container>
   </Section>
 
   <Section>
-    <Container
-      class="flex flex-col gap-4 justify-center text-center items-center px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6"
-    >
+    <Container class="flex flex-col gap-4 justify-center text-center items-center px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6">
       <h6 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h6>
       <div
         class="w-full sm:max-w-lg md:max-w-3xl flex flex-col justify-center items-center gap-3 py-5 lg:py-1"

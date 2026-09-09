@@ -29,14 +29,12 @@ const { title = "Default Title", class: className } = Astro.props;
         document.documentElement.setAttribute("data-theme", "light");
       }
     </script>
-
     <!-- Scroll to top of page when refreshing tab on route targeting id, e.g: index/#skills"  -->
     <script is:inline>
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
       }
     </script>
-
     <!-- Global event listener for all same-page anchor clicks -->
     <script>
       document.addEventListener("click", (event) => {
