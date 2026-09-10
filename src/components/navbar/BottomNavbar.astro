@@ -7,8 +7,12 @@ type Props = HTMLAttributes<"button">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<nav class:list={["w-full h-15 flex items-center fixed bottom-0 inset-x-0 bg-nav", className]} {...props}>
-  <BottomNavItem label="Início" href="/">
+<nav
+  id="bottom-navbar"
+  class:list={["w-full h-15 flex items-center fixed bottom-0 inset-x-0 bg-nav", className]}
+  {...props}
+>
+  <BottomNavItem label="Início" href="/" data-nav-target="index">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -44,7 +48,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Projetos" href="/project-gallery">
+  <BottomNavItem label="Projetos" href="/project-gallery" data-nav-target="project-gallery">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -80,7 +84,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Contato" href="#">
+  <BottomNavItem label="Contato" href="/#contact" data-nav-target="contact">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
@@ -116,7 +120,7 @@ const { class: className, ...props } = Astro.props;
     </svg>
   </BottomNavItem>
 
-  <BottomNavItem label="Perfil" href="/profile">
+  <BottomNavItem label="Perfil" href="/profile" data-nav-target="profile">
     <!-- Default icon SVG -->
     <svg
       class="w-full h-full fill-nav-item"
