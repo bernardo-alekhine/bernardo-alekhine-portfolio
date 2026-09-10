@@ -13,18 +13,18 @@ const projectsCollection = defineCollection({
       tags: z.array(z.string()),
 
       // --- Page Header & Structured Data ---
-      role: z.string(),
-      client: z.string().optional(),
-      liveUrl: z.url().optional(),
-      githubUrl: z.url().optional(),
-      metrics: z
-        .array(
-          z.object({
-            label: z.string(),
-            value: z.string(),
-          }),
-        )
-        .optional(),
+      // role: z.string(),
+      // client: z.string().optional(),
+      // liveUrl: z.url().optional(),
+      // githubUrl: z.url().optional(),
+      // metrics: z
+      //   .array(
+      //     z.object({
+      //       label: z.string(),
+      //       value: z.string(),
+      //     }),
+      //   )
+      //   .optional(),
     }),
 });
 
