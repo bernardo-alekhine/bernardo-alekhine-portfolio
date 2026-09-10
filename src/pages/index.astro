@@ -15,4 +15,39 @@ import Contact from "../components/index/Contact.astro";
   <Skills />
   <About />
   <Contact />
+
+  <script>
+    function setupScrollObserver() {
+      const contactSection = document.getElementById("contact");
+      const mobileBottomNavbar = document.getElementById("bottom-navbar");
+
+      if (!contactSection || !mobileBottomNavbar) return;
+
+      const indexLink = mobileBottomNavbar.querySelector('[data-nav-target="index"]');
+      const contactLink = mobileBottomNavbar.querySelector('[data-nav-target="contact"]');
+
+      if (!indexLink || !contactLink) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              contactLink.setAttribute("data-active", "true");
+              indexLink.setAttribute("data-active", "false");
+            } else {
+              contactLink.setAttribute("data-active", "false");
+              indexLink.setAttribute("data-active", "true");
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+
+      observer.observe(contactSection);
+    }
+
+    // Runs on initial load and handles Astro view transitions if used
+    setupScrollObserver();
+    document.addEventListener("astro:page-load", setupScrollObserver);
+  </script>
 </Layout>

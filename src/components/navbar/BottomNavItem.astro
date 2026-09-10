@@ -19,6 +19,7 @@ const isActive = currentPath === targetPath;
   data-active={isActive}
   class:list={[
     "group flex flex-1 flex-col items-center justify-center text-bottom-navbar-anchor transition-colors w-14 h-14 gap-1 select-none",
+    "duration-200",
     "data-[active=true]:text-brand data-[active=false]:text-body-color",
     className,
   ]}
