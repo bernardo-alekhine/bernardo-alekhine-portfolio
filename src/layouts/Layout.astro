@@ -31,9 +31,20 @@ const { title = "Default Title", class: className } = Astro.props;
     </script>
     <!-- Scroll to top of page when refreshing tab on route targeting id, e.g: index/#skills"  -->
     <script is:inline>
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
+      (function () {
+        // Check if this reload is driven by Astro's HMR dev server
+        const isHmrUpdate =
+          window.__astro_hmr_status || performance.getEntriesByType("navigation")[0]?.type === "reload";
+
+        if ("scrollRestoration" in history) {
+          if (isHmrUpdate) {
+            history.scrollRestoration = "auto";
+          } else {
+            history.scrollRestoration = "manual";
+            window.scrollTo(0, 0);
+          }
+        }
+      })();
     </script>
     <!-- Global event listener for all same-page anchor clicks -->
     <script>

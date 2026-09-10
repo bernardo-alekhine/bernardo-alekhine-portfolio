@@ -3,6 +3,14 @@
 @import "./token-colors.css";
 @import "./typography.css";
 
+@layer base {
+  html {
+    /* Prevents the layout from jumping during Astro's fragment swaps */
+    overflow-anchor: auto;
+    scroll-behavior: auto !important;
+  }
+}
+
 @theme {
   --font-sans: "Inter Variable", "Inter", sans-serif;
 }
