@@ -10,8 +10,8 @@ export default defineConfig({
       hmr: {
         // Enforces that HMR traffic routes strictly over Astro's default dev port
         // preventing WebSocket drops when accessing via an external local IP host
-        clientPort: 4321, 
-      }
-    }
+        clientPort: 4321,
+      },
+    },
   },
 });
