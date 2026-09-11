@@ -1,81 +1,76 @@
 @theme {
-  /* Display 32px @ 412px, 50px @ 1440px*/
-  --text-display: clamp(2rem, calc(1.549rem + 2vmin), 3.125rem);
+  /* Display 36px @ 412px, 64px @ 1440px*/
+  --text-display: clamp(2.25rem, calc(1.549rem + 2vmin), 4rem);
   --text-display--font-weight: 700;
   --text-display--line-height: 1.2;
 
-  /* Lead 22px @ 412px, 50px @ 1440px */
-  --text-lead: clamp(1.375rem, calc(1.1rem + 1.1vmin), 2rem);
+  /* Lead 18px @ 412px, 24px @ 1440px */
+  --text-lead: clamp(1.125rem, calc(1rem + 1vmin), 1.5rem);
   --text-lead--font-weight: 400;
   --text-lead--line-height: 1.5;
 
-  /* Body 18px @ 412px, 30px @ 1440px */
-  --text-main-body: clamp(1.125rem, calc(1rem + 0.8vmin), 1.875rem);
+  /* Body 16px @ 412px, 18px @ 1440px */
+  --text-main-body: clamp(1rem, calc(1rem + 0.8vmin), 1.125rem);
   --text-main-body--font-weight: 400;
   --text-main-body--line-height: 1.5;
 
-  /* Heading 26px @ 412px, 42px @ 1440px */
-  --text-heading: clamp(1.625rem, calc(1.224rem + 1.56vmin), 2.625rem);
+  /* Heading 28px @ 412px, 42px @ 1440px */
+  --text-heading: clamp(1.75rem, calc(1.224rem + 1.56vmin), 2.625rem);
   --text-heading--font-weight: 600;
   --text-heading--line-height: 1.2;
 
-  /* Subheading 20px @ 412px, 36px @ 1440px*/
-  --text-subheading: clamp(1.25rem, calc(1rem + 2vmin), 2.25rem);
+  /* Subheading 20px @ 412px, 28px @ 1440px*/
+  --text-subheading: clamp(1.25rem, calc(1rem + 2vmin), 1.75rem);
   --text-subheading--font-weight: 400;
   --text-subheading--line-height: 1.2;
 
-  /* Card title 22 px @ 412, 36px @ 1440px */
-  --text-card-title: clamp(1.375rem, calc(1.2rem + 1.2vmin), 2.25rem);
+  /* Card title 18 px @ 412, 24px @ 1440px */
+  --text-card-title: clamp(1.125rem, calc(1rem + 1.2vmin), 1.5rem);
   --text-card-title--font-weight: 700;
   --text-card-title--line-height: 1.5;
 
-  /* Card text 20px @ 412px, 50px @ 1440px */
-  --text-card: clamp(1.25rem, calc(0.949rem + 1.1vmin), 2rem);
+  /* Card text 15px @ 412px, 16px @ 1440px */
+  --text-card: clamp(0.9375rem, calc(0.949rem + 1.1vmin), 1rem);
   --text-card--font-weight: 400;
   --text-card--line-height: 1.5;
 
-  /* Tag */
-  --text-tag: clamp(1.125rem, calc(0.824rem + 1.167vw), 1.875rem); /* min: 18px, max: 30px */
+  /* Card Tag 11px @ 412px, 13px @1440px */
+  --text-tag: clamp(0.6875rem, calc(0.65rem + 0.2vw), 0.8125rem);
   --text-tag--font-weight: 600;
-  --text-tag--line-height: 1.2;
+  --text-tag--line-height: 1;
 
-  /* Text Button 18px @ 412px, 28px @ 1440px */
-  --text-button: clamp(1.125rem, calc(0.6rem + 1.8vmin), 1.75rem);
+  /* Text Button 18px @ 412px, 24px @ 1440px */
+  --text-button: clamp(1.125rem, calc(1rem + 0.55vmin), 1.5rem);
   --text-button--font-weight: 400;
   --text-button--line-height: 1.2;
 
-  /* Top Navbar Anchor 18px @ 1024px, 24px @ 1440px */
-  --text-top-navbar-anchor: clamp(1.125rem, calc(0.9rem + 0.8vmin), 1.5rem);
-  --text-top-navbar-anchor--font-weight: 400;
+  /* Top Navbar Anchor 18px @ 1024px, 20px @ 1440px */
+  --text-top-navbar-anchor: clamp(1.125rem, calc(0.817rem + 0.481vw), 1.25rem);
+  --text-top-navbar-anchor--font-weight: 500;
   --text-top-navbar-anchor--line-height: 1.2;
 
-  /* Footer Link 18px @ 1024px, 24px @ 1440px */
-  --text-footer-link: clamp(1.125rem, calc(0.9rem + 0.8vmin), 1.5rem);
+  /* Footer Link 14px @ 412px, 16px @ 1440px */
+  --text-footer-link: clamp(0.875rem, calc(0.567rem + 0.481vw), 1rem);
   --text-footer-link--font-weight: 400;
-  --text-footer-link--line-height: 1.2;
+  --text-footer-link--line-height: 1.4;
 
-  /* Footer 18px @ 1024px, 24px @ 1440px */
-  --text-footer: clamp(1.125rem, calc(0.95rem + 0.8vmin), 1.5rem);
-  --text-footer--font-weight: 400;
-  --text-footer--line-height: 1.2;
+  /* Footer 19px @ 412px, 24px @ 1440px*/
+  --text-footer: clamp(1.1875rem, calc(0.8rem + 0.3vw), 1.5rem);
+  --text-footer--font-weight: 500;
+  --text-footer--line-height: 1.4;
 
   /* Bottom Navbar Anchor 12px @ 412px, 14px @ 1024px */
-  --text-bottom-navbar-anchor: clamp(0.75rem, calc(0.65rem + 0.4vmin), 0.875rem);
+  --text-bottom-navbar-anchor: clamp(0.75rem, calc(0.7rem + 0.2vw), 0.875rem);
   --text-bottom-navbar-anchor--font-weight: 400;
   --text-bottom-navbar-anchor--line-height: 1;
 
-  /* Image title */
-  --text-image-title: clamp(1.125rem, calc(0.724rem + 1.556vw), 2.125rem); /* min: 18px, max: 34px */
-  --text-image-title--font-weight: 600;
-  --text-image-title--line-height: 1.2;
-
   /* Caption 14px @ 412px, 30px @ 1440px */
-  --text-caption: clamp(0.875rem, calc(0.6rem + 1.56vmin), 1.875rem);
+  --text-caption: clamp(0.75rem, calc(0.7rem + 0.2vw), 0.875rem); /* 12px @ 412px, 14px @ 1440px */
   --text-caption--font-weight: 300;
   --text-caption--line-height: 1.5;
 
-  /* Profile Item Title 20px @ 412px, 36px @ 1440px*/
-  --text-profile-item-title: clamp(1.25rem, calc(1rem + 1.5vmin), 2.25rem);
-  --text-profile-item-title--font-weight: 400;
-  --text-profile-item-title--line-height: 1.2;
+  /* Profile Item Title (Role / Degree / Project Name) */
+  --text-profile-item-title: clamp(1.25rem, calc(1rem + 0.8vw), 1.75rem); /* 20px @ 412px, 28px @ 1440px */
+  --text-profile-item-title--font-weight: 600;
+  --text-profile-item-title--line-height: 1.25;
 }
