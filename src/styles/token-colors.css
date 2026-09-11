@@ -10,7 +10,7 @@
 
   /* Global text layer */
   --color-body-color: var(--text-body);
-  --color-tags: var(--tag-text);
+  --color-tag: var(--tag-text);
   --color-link: var(--text-link);
 
   /* Global navbar layer */
