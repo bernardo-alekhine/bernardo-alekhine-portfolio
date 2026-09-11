@@ -7,6 +7,8 @@ tagline: >
 
 coverImage: "./logo-cards.png"
 
+coverImageAlt: "Mockup de cartões de negócios da logo Bernardo Alekhine."
+
 tags: ["Identidade Visual", "Design de Marca"]
 ---
 
