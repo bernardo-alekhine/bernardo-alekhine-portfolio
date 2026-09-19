@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { project, class: className = "" } = Astro.props;
+const slug = project.id.split("/")[0];
 const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
 ---
 
@@ -16,6 +17,7 @@ const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
     w-full max-w-84 flex flex-col justify-center items-center px-6 gap-3 py-8 lg:px-8 lg:py-4 [&>img]:select-none rounded-lg 
     lg:rounded-xl shadow-md shadow-card-shadow-color border border-card-shadow-color/50 transition-colors ${className}
   `
+  href={`/projects/${slug}`}
 >
   <Image src={coverImage} alt={coverImageAlt} class="select-none rounded-lg" loading="eager" />
 
