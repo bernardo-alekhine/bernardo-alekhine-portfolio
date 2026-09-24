@@ -26,6 +26,16 @@
   }
 }
 
+@layer components {
+  .project-content p {
+    @apply text-main-body text-body-color;
+  }
+
+  .project-content h2 {
+    @apply text-heading text-body-color;
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }

@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
+import Container from "../../components/Container.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -21,5 +22,9 @@ const { Content } = await render(project);
 ---
 
 <Layout title={project.data.title} class="bg-main">
-  <Section />
+  <Section>
+    <Container class="project-content">
+      <Content />
+    </Container>
+  </Section>
 </Layout>
