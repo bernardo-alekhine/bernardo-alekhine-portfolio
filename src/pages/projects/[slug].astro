@@ -22,8 +22,8 @@ const { Content } = await render(project);
 ---
 
 <Layout title={project.data.title} class="bg-main">
-  <Section>
-    <Container class="project-content">
+  <Section class="py-4">
+    <Container class="project-content flex flex-col gap-4 px-10 xl:px-16">
       <Content />
     </Container>
   </Section>

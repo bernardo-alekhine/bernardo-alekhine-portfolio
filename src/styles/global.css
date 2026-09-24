@@ -32,7 +32,7 @@
   }
 
   .project-content h2 {
-    @apply text-heading text-body-color;
+    @apply text-heading text-body-color pt-2;
   }
 }
 
