@@ -17,7 +17,7 @@ const projects = await getCollection("projects");
   </SectionBanner>
 
   <!-- Keep ongoing card development hidden before working on major changes -->
-  <Container class="hidden w-full grid-cols-1 md:grid-cols-3 justify-center justify-items-center px-2 md:px-12">
+  <Container class="w-full grid-cols-1 md:grid-cols-3 justify-center justify-items-center px-2 md:px-12">
     {projects.map((project) => (
       <ProjectCard project={project} />
     ))}
