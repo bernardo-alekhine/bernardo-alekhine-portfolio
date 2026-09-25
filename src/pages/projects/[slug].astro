@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
 import Container from "../../components/Container.astro";
+import TextWrapper from "../../components/TextWrapper.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -23,8 +24,10 @@ const { Content } = await render(project);
 
 <Layout title={project.data.title} class="bg-main">
   <Section class="py-4">
-    <Container class="project-content flex flex-col gap-4 px-10 xl:px-16">
-      <Content />
+    <Container class="project-content flex flex-col w-full justify-center items-center mx-auto">
+      <TextWrapper class="flex flex-col px-4 gap-4">
+        <Content />
+      </TextWrapper>
     </Container>
   </Section>
 </Layout>

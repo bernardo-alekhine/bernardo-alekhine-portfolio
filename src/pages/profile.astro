@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
+import TextWrapper from "../components/TextWrapper.astro";
 import SectionBanner from "../components/SectionBanner.astro";
 import EducationItem from "../components/profile/EducationItem.astro";
 import ExperienceItem from "../components/profile/ExperienceItem.astro";
@@ -29,43 +30,51 @@ import { certificates } from "../data/profile/certificates.ts";
   <main class="flex-1 flex flex-col gap-1">
     <Section>
       <Container class="flex flex-1 flex-col gap-4 px-10 xl:px-16">
-        <h2 class="text-heading text-body-color">Educação</h2>
-        {education.map((item) => (
-          <EducationItem {...item} />
-        ))}
+        <TextWrapper>
+          <h2 class="text-heading text-body-color">Educação</h2>
+          {education.map((item) => (
+            <EducationItem {...item} />
+          ))}
+        </TextWrapper>
       </Container>
     </Section>
     <Section>
       <Container class="flex flex-col gap-4 px-10 xl:px-16">
-        <h3 class="text-heading text-body-color">Experiência Profissional</h3>
-        <div class="flex flex-col gap-8">
-          {experience.map((item) => (
-            <ExperienceItem {...item} />
-          ))}
-        </div>
+        <TextWrapper>
+          <h3 class="text-heading text-body-color">Experiência Profissional</h3>
+          <div class="flex flex-col gap-8">
+            {experience.map((item) => (
+              <ExperienceItem {...item} />
+            ))}
+          </div>
+        </TextWrapper>
       </Container>
     </Section>
   </main>
 
   <Section>
     <Container class="flex flex-col gap-4 px-10 xl:px-16">
-      <h4 class="text-heading text-body-color">Habilidades</h4>
-      <div class="flex flex-col gap-8">
-        {skills.map((item) => (
-          <SkillItem {...item} />
-        ))}
-      </div>
+      <TextWrapper>
+        <h4 class="text-heading text-body-color">Habilidades</h4>
+        <div class="flex flex-col gap-8">
+          {skills.map((item) => (
+            <SkillItem {...item} />
+          ))}
+        </div>
+      </TextWrapper>
     </Container>
   </Section>
 
   <Section>
     <Container class="flex flex-col gap-4 px-10 xl:px-16">
-      <h5 class="text-heading text-body-color">Certificados</h5>
-      <div class="flex flex-col gap-8">
-        {certificates.map((item) => (
-          <CertificateItem {...item} />
-        ))}
-      </div>
+      <TextWrapper>
+        <h5 class="text-heading text-body-color">Certificados</h5>
+        <div class="flex flex-col gap-8">
+          {certificates.map((item) => (
+            <CertificateItem {...item} />
+          ))}
+        </div>
+      </TextWrapper>
     </Container>
   </Section>
 
