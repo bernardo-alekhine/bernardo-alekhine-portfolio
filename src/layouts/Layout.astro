@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CopyEmailToast from "../components/CopyEmailToast.astro";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title?: string;
@@ -29,60 +30,7 @@ const { title = "Default Title", class: className } = Astro.props;
         document.documentElement.setAttribute("data-theme", "light");
       }
     </script>
-    <!-- Scroll to top of page when refreshing tab on route targeting id, e.g: index/#skills"  -->
-    <script is:inline>
-      (function () {
-        // Check if this reload is driven by Astro's HMR dev server
-        const isHmrUpdate =
-          window.__astro_hmr_status || performance.getEntriesByType("navigation")[0]?.type === "reload";
-
-        if ("scrollRestoration" in history) {
-          if (isHmrUpdate) {
-            history.scrollRestoration = "auto";
-          } else {
-            history.scrollRestoration = "manual";
-            window.scrollTo(0, 0);
-          }
-        }
-      })();
-    </script>
-    <!-- Global event listener for all same-page anchor clicks -->
-    <script>
-      document.addEventListener("click", (event) => {
-        const anchor = (event.target as HTMLElement).closest("a");
-        if (!anchor) return;
-
-        // Skip links that open in new tabs or are external JS hooks
-        if (anchor.target === "_blank" || anchor.getAttribute("role") === "button") return;
-
-        const rawHref = anchor.getAttribute("href");
-        if (!rawHref) return;
-
-        const targetUrl = new URL(anchor.href, window.location.href);
-        const normalizePath = (p: string) => (p !== "/" ? p.replace(/\/$/, "") : p);
-
-        const isSamePath = normalizePath(targetUrl.pathname) === normalizePath(window.location.pathname);
-
-        if (isSamePath) {
-          if (targetUrl.hash) {
-            // Target points to an anchor on the current page (e.g., /#projects)
-            const targetElement = document.querySelector(targetUrl.hash);
-            if (targetElement) {
-              event.preventDefault();
-              targetElement.scrollIntoView({ behavior: "smooth" });
-              // Update URL hash without forcing a hard browser jump
-              history.pushState(null, "", targetUrl.hash);
-            }
-          } else {
-            // Target points to the current page top (e.g., "/" while on "/")
-            event.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            // Clean hash from URL if navigating back to root page
-            history.pushState(null, "", targetUrl.pathname);
-          }
-        }
-      });
-    </script>
+    <ClientRouter />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.svg" />
   </head>
