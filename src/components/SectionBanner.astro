@@ -1,11 +1,24 @@
 ---
 import Container from "./Container.astro";
+import TextWrapper from "./TextWrapper.astro";
 
-const { class: className } = Astro.props;
+interface Props {
+  class?: string;
+  align?: "center" | "left";
+}
+
+const { class: className, align = "center" } = Astro.props;
+
+const alignmentClasses = {
+  center: "items-center text-center",
+  left: "items-start text-left",
+};
 ---
 
 <div class:list={["w-full", className]}>
-  <Container class="flex flex-col items-center gap-4 py-8 px-10 xl:px-16 text-center">
-    <slot />
+  <Container class=`flex flex-col gap-4 py-8 px-10 xl:px-16 ${alignmentClasses[align]}`>
+    <TextWrapper>
+      <slot />
+    </TextWrapper>
   </Container>
 </div>
