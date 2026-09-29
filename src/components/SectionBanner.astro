@@ -17,7 +17,7 @@ const alignmentClasses = {
 
 <div class:list={["w-full", className]}>
   <Container class=`flex flex-col gap-4 py-8 px-10 xl:px-16 ${alignmentClasses[align]}`>
-    <TextWrapper>
+    <TextWrapper class="flex flex-col gap-2">
       <slot />
     </TextWrapper>
   </Container>
