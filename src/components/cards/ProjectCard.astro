@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
+import Arrow from "../icons/Arrow.astro";
 
 interface Props {
   class?: string;
@@ -14,12 +15,12 @@ const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
 
 <a
   class=`
-    w-full max-w-84 flex flex-col justify-center items-center px-6 gap-3 py-8 lg:px-8 lg:py-4 [&>img]:select-none rounded-lg 
+    w-full max-w-110 md:max-w-xl flex flex-col justify-center items-center gap-3 px-5 py-5 md:px-6 md:py-6 [&>img]:select-none rounded-lg 
     lg:rounded-xl shadow-md shadow-card-shadow-color border border-card-shadow-color/50 transition-colors ${className}
   `
   href={`/projects/${slug}`}
 >
-  <Image src={coverImage} alt={coverImageAlt} class="select-none rounded-lg" loading="eager" />
+  <Image src={coverImage} alt={coverImageAlt} class="select-none aspect-video rounded-lg" loading="eager" />
 
   <div class="flex flex-row w-full gap-2">
     {tags.map((tag) => (
@@ -31,5 +32,9 @@ const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
       <strong>{title}</strong>
     </p>
     <p class="text-body-color text-lg">{tagline}</p>
+  </div>
+  <div class="w-full flex flex-row gap-2 items-center">
+    <p class="text-lg font-medium text-brand">Ver projeto</p>
+    <Arrow class="text-brand" />
   </div>
 </a>
