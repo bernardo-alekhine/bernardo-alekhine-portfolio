@@ -22,15 +22,22 @@ const { title = "Default Title", class: className } = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <script is:inline>
-      const savedTheme = localStorage.getItem("theme");
+      function applyTheme() {
+        const savedTheme = localStorage.getItem("theme");
 
-      if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
+        if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
       }
+
+      applyTheme();
+
+      document.addEventListener("astro:after-swap", applyTheme);
     </script>
     <ClientRouter />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.svg" />
   </head>
