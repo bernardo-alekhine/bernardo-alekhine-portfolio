@@ -18,7 +18,7 @@ import { certificates } from "../data/profile/certificates.ts";
 ---
 
 <Layout title="Perfil" class="bg-main">
-  <SectionBanner class="bg-section-banner mb-10" align="left">
+  <SectionBanner class="bg-section-banner mb-10">
     <h1 class="text-left text-heading text-body-color w-full">Perfil</h1>
     <p class="text-left text-lead text-body-color w-full">
       Sou estudante de ADS e conecto a lógica da TI à criatividade do Design Gráfico. Minha experiência com suporte e
@@ -29,7 +29,7 @@ import { certificates } from "../data/profile/certificates.ts";
   </SectionBanner>
   <main class="flex-1 flex flex-col gap-1">
     <Section>
-      <Container class="flex flex-1 flex-col gap-4 px-10 xl:px-16">
+      <Container class="flex flex-1 flex-col items-center gap-4 px-10 xl:px-16">
         <TextWrapper>
           <h2 class="text-heading text-body-color">Educação</h2>
           {education.map((item) => (
@@ -39,9 +39,9 @@ import { certificates } from "../data/profile/certificates.ts";
       </Container>
     </Section>
     <Section>
-      <Container class="flex flex-col gap-4 px-10 xl:px-16">
+      <Container class="flex flex-col items-center gap-4 px-10 xl:px-16">
         <TextWrapper>
-          <h3 class="text-heading text-body-color">Experiência Profissional</h3>
+          <h2 class="text-heading text-body-color">Experiência Profissional</h2>
           <div class="flex flex-col gap-8">
             {experience.map((item) => (
               <ExperienceItem {...item} />
@@ -53,9 +53,9 @@ import { certificates } from "../data/profile/certificates.ts";
   </main>
 
   <Section>
-    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+    <Container class="flex flex-col items-center gap-4 px-10 xl:px-16">
       <TextWrapper>
-        <h4 class="text-heading text-body-color">Habilidades</h4>
+        <h2 class="text-heading text-body-color">Habilidades</h2>
         <div class="flex flex-col gap-8">
           {skills.map((item) => (
             <SkillItem {...item} />
@@ -66,9 +66,9 @@ import { certificates } from "../data/profile/certificates.ts";
   </Section>
 
   <Section>
-    <Container class="flex flex-col gap-4 px-10 xl:px-16">
+    <Container class="flex flex-col items-center gap-4 px-10 xl:px-16">
       <TextWrapper>
-        <h5 class="text-heading text-body-color">Certificados</h5>
+        <h2 class="text-heading text-body-color">Certificados</h2>
         <div class="flex flex-col gap-8">
           {certificates.map((item) => (
             <CertificateItem {...item} />
@@ -80,7 +80,7 @@ import { certificates } from "../data/profile/certificates.ts";
 
   <Section>
     <Container class="flex flex-col gap-4 justify-center text-center items-center px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6">
-      <h6 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h6>
+      <h2 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h2>
       <div
         class="w-full sm:max-w-lg md:max-w-3xl flex flex-col justify-center items-center gap-3 py-5 lg:py-1"
         id="buttons"
