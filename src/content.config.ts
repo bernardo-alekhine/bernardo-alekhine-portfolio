@@ -12,6 +12,7 @@ const projectsCollection = defineCollection({
       coverImage: image(),
       coverImageAlt: z.string(),
       tags: z.array(z.string()),
+      featured: z.boolean().default(false),
 
       // --- Page Header & Structured Data ---
       // role: z.string(),

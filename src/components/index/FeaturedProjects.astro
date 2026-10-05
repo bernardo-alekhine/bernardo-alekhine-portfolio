@@ -5,7 +5,9 @@ import SectionBanner from "../SectionBanner.astro";
 import { getCollection } from "astro:content";
 import ProjectCard from "../cards/ProjectCard.astro";
 
-const projects = await getCollection("projects");
+const projects = await getCollection("projects", ({ data }) => {
+  return data.featured === true;
+});
 ---
 
 <Section class="gap-6" id="featured-projects">
