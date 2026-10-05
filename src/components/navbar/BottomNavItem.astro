@@ -11,7 +11,8 @@ const normalizePath = (path: string) => (path !== "/" ? path.replace(/\/$/, "") 
 
 const currentPath = normalizePath(Astro.url.pathname);
 const targetPath = normalizePath(String(href));
-const isActive = currentPath === targetPath;
+const isActive =
+  targetPath === "/" ? currentPath === "/" : currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
 ---
 
 <a
