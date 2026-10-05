@@ -19,7 +19,11 @@ const links = [
 
   <div class="flex-row items-center gap-10 hidden lg:flex">
     {links.map(({ href, label }) => {
-      const isActive = currentPath === normalizePath(href);
+      const targetPath: string = normalizePath(href);
+      const isActive: boolean =
+        targetPath === "/"
+          ? currentPath === "/"
+          : currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
 
       return (
         <a
