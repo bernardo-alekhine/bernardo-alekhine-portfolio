@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
+import SectionBanner from "../../components/SectionBanner.astro";
 import Container from "../../components/Container.astro";
 import TextWrapper from "../../components/TextWrapper.astro";
 import { getCollection, render } from "astro:content";
@@ -23,6 +24,16 @@ const { Content } = await render(project);
 ---
 
 <Layout title={project.data.title} class="bg-main">
+  <SectionBanner class="bg-section-banner">
+    <h1 class="text-left text-heading text-body-color w-full">{project.data.title}</h1>
+    <p class="text-left text-lead text-body-color w-full">{project.data.tagline}</p>
+    <div class="flex flex-row w-full gap-2">
+      {project.data.tags.map((tag) => (
+        <small class="text-tag bg-card-shadow-color/20 px-2 py-0.5 rounded">{tag}</small>
+      ))}
+    </div>
+  </SectionBanner>
+
   <Section class="py-4">
     <Container class="project-content flex flex-col w-full justify-center items-center mx-auto">
       <article class="px-4">
