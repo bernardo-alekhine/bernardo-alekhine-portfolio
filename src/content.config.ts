@@ -9,6 +9,7 @@ const projectsCollection = defineCollection({
       // --- Card Metadata ---
       title: z.string(),
       tagline: z.string(),
+      date: z.date(),
       coverImage: image(),
       coverImageAlt: z.string(),
       tags: z.array(z.string()),

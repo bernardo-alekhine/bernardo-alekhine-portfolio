@@ -6,7 +6,9 @@ import Container from "../../components/Container.astro";
 import { getCollection } from "astro:content";
 import ProjectCard from "../../components/cards/ProjectCard.astro";
 
-const projects = await getCollection("projects");
+const allProjects = await getCollection("projects");
+
+const sortedProjects = allProjects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <Layout title="Projetos" class="bg-main">
@@ -21,7 +23,7 @@ const projects = await getCollection("projects");
   <main>
     <Section class="py-8">
       <Container class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
-        {projects.map((project) => (
+        {sortedProjects.map((project) => (
           <ProjectCard project={project} />
         ))}
       </Container>
