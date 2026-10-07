@@ -5,9 +5,11 @@ import SectionBanner from "../SectionBanner.astro";
 import { getCollection } from "astro:content";
 import ProjectCard from "../cards/ProjectCard.astro";
 
-const projects = await getCollection("projects", ({ data }) => {
+const featuredProjects = await getCollection("projects", ({ data }) => {
   return data.featured === true;
 });
+
+const sortedProjects = featuredProjects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <Section class="gap-6" id="featured-projects">
@@ -19,7 +21,7 @@ const projects = await getCollection("projects", ({ data }) => {
   </SectionBanner>
 
   <Container class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
-    {projects.map((project) => (
+    {sortedProjects.map((project) => (
       <ProjectCard project={project} />
     ))}
   </Container>

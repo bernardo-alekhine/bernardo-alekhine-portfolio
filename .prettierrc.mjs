@@ -12,5 +12,11 @@ export default {
         parser: "astro",
       },
     },
+    {
+      files: "*.mdx",
+      options: {
+        parser: "mdx",
+      },
+    },
   ],
 };

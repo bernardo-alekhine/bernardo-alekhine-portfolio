@@ -21,6 +21,13 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
+
+const locale = Astro.currentLocale || "pt-BR";
+const formattedDate: string = project.data.date.toLocaleDateString(locale, {
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
 ---
 
 <Layout title={project.data.title} class="bg-main">
@@ -29,14 +36,17 @@ const { Content } = await render(project);
     <p class="text-left text-lead text-body-color w-full">{project.data.tagline}</p>
     <div class="flex flex-row w-full gap-2">
       {project.data.tags.map((tag) => (
-        <small class="text-tag bg-card-shadow-color/20 px-2 py-0.5 rounded">{tag}</small>
+        <small class="text-tag text-sm bg-card-shadow-color/20 px-2 py-0.5 rounded">{tag}</small>
       ))}
     </div>
+    <time class="text-left w-full text-nav-item text-sm" datetime={project.data.date.toISOString().split("T")[0]}>
+      Desenvolvido em {formattedDate}
+    </time>
   </SectionBanner>
 
   <Section class="py-4">
     <Container class="project-content flex flex-col w-full justify-center items-center mx-auto">
-      <article class="px-4">
+      <article class="px-10 xl:px-16">
         <TextWrapper class="flex flex-col gap-4">
           <Content />
         </TextWrapper>
