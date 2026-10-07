@@ -15,8 +15,12 @@ const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
 
 <a
   class=`
-    w-full max-w-110 md:max-w-xl flex flex-col justify-center items-center gap-3 px-5 py-5 md:px-6 md:py-6 [&>img]:select-none rounded-lg 
-    lg:rounded-xl shadow-md shadow-card-shadow-color border border-card-shadow-color/50 transition-colors ${className}
+    w-full max-w-110 md:max-w-md lg:max-w-lg xl:max-w-xl flex flex-col justify-center items-center 
+    gap-3 px-5 py-5 md:px-5.5 md:py-5.5 [&>img]:select-none rounded-lg 
+    lg:rounded-xl shadow-md shadow-card-shadow-color border border-card-shadow-color/50 transition-transform
+    duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-lg hover:border-card-shadow-color
+    active:scale-99 active:border-card-shadow-color will-change-transform
+    ${className}
   `
   href={`/projects/${slug}`}
 >
