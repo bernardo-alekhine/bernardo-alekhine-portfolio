@@ -15,17 +15,6 @@
   --font-sans: "Inter Variable", "Inter", sans-serif;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @layer components {
   .project-content p {
     @apply text-main-body text-body-color;
@@ -34,8 +23,4 @@
   .project-content h2 {
     @apply text-heading text-body-color pt-4;
   }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
 }

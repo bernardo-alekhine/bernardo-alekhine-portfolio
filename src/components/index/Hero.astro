@@ -4,6 +4,7 @@ import heroProfile from "../../assets/hero-profile.png";
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import TextWrapper from "../TextWrapper.astro";
+import FadeIn from "../FadeIn.astro";
 import LinkButton from "../actions/LinkButton.astro";
 import WhatsAppIcon from "../icons/WhatsApp.astro";
 import ArrowIcon from "../icons/Arrow.astro";
@@ -12,46 +13,51 @@ import DownArrow from "../actions/DownArrow.astro";
 
 <Section class="xl:min-h-dvh justify-center 2xl:gap-6" id="hero">
   <Container class="xl:max-w-[90%] 2xl:max-w-[80%] px-4 xl:px-8">
-    <div>
-      <div class="flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between">
-        <div class="min-h-0 flex justify-center items-center xl:order-last xl:flex-1 xl:justify-end">
-          <Image
-            src={heroProfile}
-            alt="Bernardo Alekhine profile with graphic curves"
-            loading="eager"
-            class="w-[clamp(310px,76vmin,600px)] max-w-112.5 xl:max-w-150 aspect-square select-none"
-          />
-        </div>
+    <FadeIn>
+      <div>
+        <div class="flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between">
+          <div class="min-h-0 flex justify-center items-center xl:order-last xl:flex-1 xl:justify-end">
+            <Image
+              src={heroProfile}
+              alt="Bernardo Alekhine profile with graphic curves"
+              loading="eager"
+              class="w-[clamp(310px,76vmin,600px)] max-w-112.5 xl:max-w-150 aspect-square select-none"
+            />
+          </div>
 
-        <div class="w-full flex-1 flex flex-col max-w-110 lg:max-w-125 2xl:max-w-162.5 justify-center items-center gap-4 lg:gap-5">
-          <TextWrapper class="w-full justify-center items-center flex flex-col gap-4 lg:gap-5">
-            <h1 class="max-w-[19ch] text-display text-body-color text-center">
-              Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional de
-              TI
-            </h1>
-            <p class="max-w-[38ch] xl:max-w-[32ch] text-lead text-body-color text-center">
-              Crio soluções visuais combinando tecnologia, criatividade e atenção aos detalhes para comunicar ideias de
-              forma clara e impactante.
-            </p>
-          </TextWrapper>
+          <div class="w-full flex-1 flex flex-col max-w-110 lg:max-w-125 2xl:max-w-162.5 justify-center items-center gap-4 lg:gap-5">
+            <TextWrapper class="w-full justify-center items-center flex flex-col gap-4 lg:gap-5">
+              <h1 class="max-w-[19ch] text-display text-body-color text-center">
+                Olá! Meu nome é <span class="text-brand inline">Bernardo Alekhine</span> Designer Gráfico Profissional
+                de TI
+              </h1>
+              <p class="max-w-[38ch] xl:max-w-[32ch] text-lead text-body-color text-center">
+                Crio soluções visuais combinando tecnologia, criatividade e atenção aos detalhes para comunicar ideias
+                de forma clara e impactante.
+              </p>
+            </TextWrapper>
 
-          <div class="w-full flex flex-col justify-center items-center gap-3 py-5 lg:py-1" id="buttons">
-            <LinkButton title="Ver Projetos" href="/projects" variant="solid">
-              <ArrowIcon class="text-button-text-color" />
-            </LinkButton>
-            <LinkButton
-              title="Falar no WhatsApp"
-              href="https://wa.me/5538998552879"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-            >
-              <WhatsAppIcon class="fill-current" />
-            </LinkButton>
+            <div class="w-full flex flex-col justify-center items-center gap-3 py-5 lg:py-1" id="buttons">
+              <LinkButton title="Ver Projetos" href="/projects" variant="solid">
+                <ArrowIcon class="text-button-text-color" />
+              </LinkButton>
+              <LinkButton
+                title="Falar no WhatsApp"
+                href="https://wa.me/5538998552879"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline"
+              >
+                <WhatsAppIcon class="fill-current" />
+              </LinkButton>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   </Container>
-  <DownArrow href="/#featured-projects" class="hidden xl:block" />
+
+  <FadeIn delay="delay-300">
+    <DownArrow href="/#featured-projects" class="hidden xl:block" />
+  </FadeIn>
 </Section>
