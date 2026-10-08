@@ -6,28 +6,35 @@ interface Props {
 const { delay = "delay-0" } = Astro.props;
 ---
 
-<div class={`scroll-fade opacity-0 translate-y-8 transition-all duration-700 transform-gpu ease-out ${delay}`}>
+<div
+  class={`scroll-fade opacity-0 translate-y-8 transform-gpu will-change-transform transition-all duration-700 
+  ease-[cubic-bezier(0.16,1,0.3,1)] ${delay}`}
+>
   <slot />
 </div>
 
 <script>
-  // This listener ensures animations work perfectly even if you use Astro View Transitions
-  document.addEventListener("astro:page-load", () => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("opacity-0", "translate-y-8");
-            entry.target.classList.add("opacity-100", "translate-y-0");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-      },
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-8");
+          entry.target.classList.add("opacity-100", "translate-y-0");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    },
+  );
 
-    document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll(".scroll-fade").forEach((el) => {
+      // Only observe elements that haven't animated yet
+      if (!el.classList.contains("opacity-100")) {
+        observer.observe(el);
+      }
+    });
   });
 </script>
