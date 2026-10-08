@@ -1,14 +1,15 @@
 ---
 interface Props {
   delay?: string;
+  class?: string;
 }
 
-const { delay = "delay-0" } = Astro.props;
+const { delay = "delay-0", class: className = "" } = Astro.props;
 ---
 
 <div
   class={`scroll-fade opacity-0 translate-y-8 transform-gpu will-change-transform transition-all duration-700 
-  ease-[cubic-bezier(0.16,1,0.3,1)] ${delay}`}
+  ease-[cubic-bezier(0.16,1,0.3,1)] ${delay} ${className}`}
 >
   <slot />
 </div>

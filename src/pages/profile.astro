@@ -4,6 +4,7 @@ import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
 import TextWrapper from "../components/TextWrapper.astro";
 import SectionBanner from "../components/SectionBanner.astro";
+import FadeIn from "../components/FadeIn.astro";
 import EducationItem from "../components/profile/EducationItem.astro";
 import ExperienceItem from "../components/profile/ExperienceItem.astro";
 import SkillItem from "../components/profile/SkillItem.astro";
@@ -79,20 +80,22 @@ import { certificates } from "../data/profile/certificates.ts";
   </Section>
 
   <Section>
-    <Container class="flex flex-col gap-4 justify-center text-center items-center px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6">
-      <h2 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h2>
-      <div
-        class="w-full sm:max-w-lg md:max-w-3xl flex flex-col justify-center items-center gap-3 py-5 lg:py-1"
-        id="buttons"
-      >
-        <LinkButton title="Entre em Contato" href="/#contact" variant="solid">
-          <ArrowIcon class="text-button-text-color" />
-        </LinkButton>
+    <Container class="px-10 xl:px-16 pt-4 pb-4 lg:pt-6 lg:pb-6">
+      <FadeIn class="flex flex-col gap-4 justify-center text-center items-center w-full">
+        <h2 class="text-heading text-brand text-center">E aí? Vamos trabalhar juntos?</h2>
+        <div
+          class="w-full sm:max-w-lg md:max-w-3xl flex flex-col justify-center items-center gap-3 py-5 lg:py-1"
+          id="buttons"
+        >
+          <LinkButton title="Entre em Contato" href="/#contact" variant="solid">
+            <ArrowIcon class="text-button-text-color" />
+          </LinkButton>
 
-        <LinkButton title="Baixar meu Currículo" href="#" variant="outline">
-          <DownloadResumeIcon class="text-brand" />
-        </LinkButton>
-      </div>
+          <LinkButton title="Baixar meu Currículo" href="#" variant="outline">
+            <DownloadResumeIcon class="text-brand" />
+          </LinkButton>
+        </div>
+      </FadeIn>
     </Container>
   </Section>
 </Layout>
