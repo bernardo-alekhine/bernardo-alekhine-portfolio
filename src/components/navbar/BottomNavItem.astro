@@ -26,11 +26,23 @@ const isActive =
   ]}
   {...restProps}
 >
-  <div class="relative w-7 h-7 flex items-center justify-center shrink-0 [&>svg]:select-none">
-    <div class="hidden group-data-[active=true]:block">
+  <div
+    transition:name={`nav-pill-${label}`}
+    transition:animate="initial"
+    class="relative w-13 h-8 flex items-center justify-center shrink-0 [&>svg]:select-none rounded-full
+      transition-all duration-500 group-data-[active=true]:bg-brand/10"
+  >
+    <div
+      class="absolute inset-0 flex items-center justify-center transition-all duration-500 opacity-0
+      scale-90 group-data-[active=true]:opacity-100 group-data-[active=true]:scale-100 pointer-events-none"
+    >
       <slot name="highlight-icon" />
     </div>
-    <div class="hidden group-data-[active=false]:block">
+
+    <div
+      class="absolute inset-0 flex items-center justify-center transition-all duration-500 opacity-100
+      scale-100 group-data-[active=true]:opacity-0 group-data-[active=true]:scale-90"
+    >
       <slot name="default-icon" />
     </div>
   </div>
