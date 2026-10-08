@@ -24,7 +24,7 @@ const { title, tagline, coverImage, coverImageAlt, tags } = project.data;
   `
   href={`/projects/${slug}`}
 >
-  <Image src={coverImage} alt={coverImageAlt} class="select-none aspect-video rounded-lg" loading="eager" />
+  <Image src={coverImage} alt={coverImageAlt} class="select-none aspect-video rounded-lg" />
 
   <div class="flex flex-row w-full gap-2">
     {tags.map((tag) => (
