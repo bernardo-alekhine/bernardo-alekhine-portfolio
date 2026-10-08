@@ -24,3 +24,8 @@
     @apply text-heading text-body-color pt-4;
   }
 }
+
+::selection {
+  background-color: var(--brand);
+  color: var(--text-selection); /* High-contrast text color */
+}

@@ -53,6 +53,7 @@
   --bg-main: #fdfcff;
   --surface: #f9f6ff;
   --text-body: #1b1a1c;
+  --text-selection: #f9f6ff;
   --tag-text: #3033d5;
   --text-link: var(--brand);
   --section-banner: #f2f2f2;
@@ -84,6 +85,7 @@
   --bg-main: #0d0b0d;
   --surface: #161316;
   --text-body: #f9f6ff;
+  --text-selection: #1b1a1c;
   --tag-text: #13cda2;
   --text-link: var(--brand);
   --section-banner: #1f1f1f;
