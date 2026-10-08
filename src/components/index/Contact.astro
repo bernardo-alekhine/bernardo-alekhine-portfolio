@@ -2,6 +2,7 @@
 import Section from "../Section.astro";
 import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
+import FadeIn from "../FadeIn.astro";
 import ContactItem from "../actions/ContactItem.astro";
 import WhatsAppIcon from "../icons/contact/WhatsAppLogo.astro";
 import LinkedInIcon from "../icons/contact/LinkedIn.astro";
@@ -11,48 +12,52 @@ import GitHubIcon from "../icons/GitHub.astro";
 
 <Section class="pb-16" id="contact">
   <SectionBanner>
-    <h2 class="text-heading text-brand">Canais de Contato</h2>
+    <FadeIn>
+      <h2 class="text-heading text-brand">Canais de Contato</h2>
+    </FadeIn>
   </SectionBanner>
   <Container class="flex flex-col items-center">
-    <div
-      class="grid grid-cols-1 md:grid-cols-2
-      shadow-md shadow-card-shadow-color border border-card-shadow-color/50
-      rounded-lg lg:rounded-xl
-      px-2 py-2 gap-2 md:px-4 md:py-4 md:gap-x-6 md:gap-y-6"
-    >
-      <ContactItem
-        as="a"
-        value="+55 38 99855-2879"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://wa.me/5538998552879"
+    <FadeIn>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2
+        shadow-md shadow-card-shadow-color border border-card-shadow-color/50
+        rounded-lg lg:rounded-xl
+        px-2 py-2 gap-2 md:px-4 md:py-4 md:gap-x-6 md:gap-y-6"
       >
-        <WhatsAppIcon />
-      </ContactItem>
+        <ContactItem
+          as="a"
+          value="+55 38 99855-2879"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/5538998552879"
+        >
+          <WhatsAppIcon />
+        </ContactItem>
 
-      <ContactItem as="button" value="alekhinebernardo@gmail.com" data-copy-email="alekhinebernardo@gmail.com">
-        <EmailIcon />
-      </ContactItem>
+        <ContactItem as="button" value="alekhinebernardo@gmail.com" data-copy-email="alekhinebernardo@gmail.com">
+          <EmailIcon />
+        </ContactItem>
 
-      <ContactItem
-        as="a"
-        value="in/bernardo-alekhine"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://linkedin.com/in/bernardo-alekhine"
-      >
-        <LinkedInIcon />
-      </ContactItem>
+        <ContactItem
+          as="a"
+          value="in/bernardo-alekhine"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://linkedin.com/in/bernardo-alekhine"
+        >
+          <LinkedInIcon />
+        </ContactItem>
 
-      <ContactItem
-        as="a"
-        value="github.com/bernardo-alekhine"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/bernardo-alekhine"
-      >
-        <GitHubIcon />
-      </ContactItem>
-    </div>
+        <ContactItem
+          as="a"
+          value="github.com/bernardo-alekhine"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/bernardo-alekhine"
+        >
+          <GitHubIcon />
+        </ContactItem>
+      </div>
+    </FadeIn>
   </Container>
 </Section>
