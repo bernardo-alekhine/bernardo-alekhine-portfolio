@@ -6,5 +6,5 @@ import BottomNavbar from "./BottomNavbar.astro";
 <header class="sticky top-0 z-50 w-full flex flex-col">
   <TopNavbar />
   <!-- Hide bottom navbar on desktop screens -->
-  <BottomNavbar class="lg:hidden [@media(hover:hover)and(pointer:fine)and(max-md:block)]:hidden" />
+  <BottomNavbar class="block md:[@media(hover:hover)and(pointer:fine)]:hidden lg:hidden" />
 </header>
