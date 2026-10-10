@@ -1,6 +1,5 @@
 ---
 import Section from "../Section.astro";
-import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
 import FadeIn from "../FadeIn.astro";
 import { getCollection } from "astro:content";
@@ -21,11 +20,11 @@ const sortedProjects = featuredProjects.sort((a, b) => b.data.date.getTime() - a
     </p>
   </SectionBanner>
 
-  <Container class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
+  <div class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
     <FadeIn>
       {sortedProjects.map((project) => (
         <ProjectCard project={project} />
       ))}
     </FadeIn>
-  </Container>
+  </div>
 </Section>

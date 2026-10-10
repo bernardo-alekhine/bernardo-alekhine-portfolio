@@ -1,6 +1,5 @@
 ---
 import Section from "../Section.astro";
-import Container from "../Container.astro";
 import SectionBanner from "../SectionBanner.astro";
 import FadeIn from "../FadeIn.astro";
 import SkillCard from "../cards/SkillCard.astro";
@@ -14,7 +13,7 @@ import SkillCard from "../cards/SkillCard.astro";
       acabamento pronto para mídias digitais ou impressas.
     </h3>
   </SectionBanner>
-  <Container class="flex flex-col items-center">
+  <div class="w-full flex flex-col items-center">
     <FadeIn>
       <div
         class="grid grid-cols-1 md:grid-cols-2
@@ -127,5 +126,5 @@ import SkillCard from "../cards/SkillCard.astro";
         </SkillCard>
       </div>
     </FadeIn>
-  </Container>
+  </div>
 </Section>

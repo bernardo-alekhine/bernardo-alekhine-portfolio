@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
 import SectionBanner from "../../components/SectionBanner.astro";
 import FadeIn from "../../components/FadeIn.astro";
-import Container from "../../components/Container.astro";
 import { getCollection } from "astro:content";
 import ProjectCard from "../../components/cards/ProjectCard.astro";
 
@@ -23,13 +22,13 @@ const sortedProjects = allProjects.sort((a, b) => b.data.date.getTime() - a.data
 
   <main>
     <Section class="py-8">
-      <Container class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
+      <div class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
         <FadeIn>
           {sortedProjects.map((project) => (
             <ProjectCard project={project} />
           ))}
         </FadeIn>
-      </Container>
+      </div>
     </Section>
   </main>
 </Layout>
