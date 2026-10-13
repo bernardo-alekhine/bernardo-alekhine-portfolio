@@ -15,6 +15,8 @@
   --font-sans: "Inter Variable", "Inter", sans-serif;
 }
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @layer components {
   .project-content p {
     @apply text-main-body text-body-color;
@@ -27,5 +29,5 @@
 
 ::selection {
   background-color: var(--brand);
-  color: var(--text-selection); /* High-contrast text color */
+  color: var(--text-selection);
 }
