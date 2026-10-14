@@ -1,9 +1,11 @@
 ---
 interface Props {
   class?: string;
+  title: string;
+  description: string;
 }
 
-const { class: className } = Astro.props;
+const { class: className, title, description } = Astro.props;
 ---
 
 <div
@@ -13,5 +15,10 @@ const { class: className } = Astro.props;
     className,
   ]}
 >
-  <slot />
+  <div class="w-[70%] h-auto">
+    <slot />
+  </div>
+
+  <p class="text-card-title w-full">{title}</p>
+  <p class="text-lg w-full">{description}</p>
 </div>
