@@ -1,0 +1,77 @@
+---
+import SunIcon from "../icons/theme-switch/SunIcon.astro";
+import MoonIcon from "../icons/theme-switch/MoonIcon.astro";
+---
+
+<button
+  type="button"
+  aria-label="Toggle theme"
+  class="relative flex h-9 w-16 items-center
+    rounded-full
+    border border-theme-toggle-track-border
+    bg-theme-toggle-track-bg
+    cursor-pointer overflow-hidden
+    transition-colors duration-300"
+  id="theme-toggle"
+>
+  <span
+    class="absolute left-1 z-10
+      flex h-7 w-7 items-center justify-center
+      translate-x-0
+      transition-transform duration-500
+      ease-[cubic-bezier(0.22,1,0.36,1)]
+      dark:translate-x-7"
+  >
+    <span
+      class="absolute
+        flex items-center justify-center
+        opacity-100
+        scale-100
+        rotate-0
+        transition-[opacity,transform]
+        duration-400
+        ease-in-out
+        dark:opacity-0
+        dark:scale-75
+        dark:rotate-45"
+    >
+      <SunIcon />
+    </span>
+
+    <span
+      class="absolute
+        flex items-center justify-center
+        opacity-0
+        scale-75
+        -rotate-45
+        transition-[opacity,transform]
+        duration-400
+        ease-in-out
+        dark:opacity-100
+        dark:scale-100
+        dark:rotate-0"
+    >
+      <MoonIcon />
+    </span>
+  </span>
+</button>
+
+<script>
+  function setupThemeToggle() {
+    const toggleButton = document.getElementById("theme-toggle");
+
+    if (!toggleButton) return;
+
+    toggleButton.addEventListener("click", () => {
+      const root = document.documentElement;
+
+      const currentTheme = root.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      root.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
+  document.addEventListener("astro:page-load", setupThemeToggle);
+</script>

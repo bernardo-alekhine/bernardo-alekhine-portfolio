@@ -13,7 +13,10 @@
 
 @theme {
   --font-sans: "Inter Variable", "Inter", sans-serif;
+  --default-transition-duration: 400ms;
 }
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @layer components {
   .project-content p {
@@ -27,5 +30,5 @@
 
 ::selection {
   background-color: var(--brand);
-  color: var(--text-selection); /* High-contrast text color */
+  color: var(--text-selection);
 }
