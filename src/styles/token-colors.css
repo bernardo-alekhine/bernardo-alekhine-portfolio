@@ -34,6 +34,10 @@
   --color-card-work-tools: var(--card-work-tools);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
 
+  /* Global theme toggle layer */
+  --color-theme-toggle-track-bg: var(--theme-toggle-track-bg);
+  --color-theme-toggle-track-border: var(--theme-toggle-track-border);
+
   /* Global toast layer */
   --color-toast: var(--surface);
 
@@ -61,8 +65,8 @@
   --nav-anchor-hover: var(--brand);
   --nav-item: #47454a;
   --nav-mobile-highlight: var(--brand);
-  --theme-switch-track-bg: var(--surface);
-  --theme-switch-track-outline: #b3b0b5;
+  --theme-toggle-track-bg: var(--surface);
+  --theme-toggle-track-border: #b3b0b5;
   --card-shadow-color: rgba(0, 0, 0, 0.15);
   --cards-skills-bg-primary: #efeff0;
   --cards-skills-fg: #1b1a1c;
@@ -95,7 +99,8 @@
   --nav-anchor-hover: var(--brand);
   --nav-item: #b3b0b5;
   --nav-mobile-highlight: var(--brand);
-  --theme-switch-track-outline: #1b1a1c;
+  --theme-toggle-track-bg: #0d0b0d;
+  --theme-toggle-track-border: #1b1a1c;
   --card-shadow-color: rgba(255, 255, 255, 0.15);
   --cards-skills-bg-primary: #1e1e1e;
   --card-skills-fg: #f9f6ff;
