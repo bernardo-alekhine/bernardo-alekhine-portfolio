@@ -6,7 +6,6 @@ const projectsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/projects" }),
   schema: ({ image }) =>
     z.object({
-      // --- Card Metadata ---
       title: z.string(),
       tagline: z.string(),
       date: z.date(),
@@ -14,20 +13,6 @@ const projectsCollection = defineCollection({
       coverImageAlt: z.string(),
       tags: z.array(z.string()),
       featured: z.boolean().default(false),
-
-      // --- Page Header & Structured Data ---
-      // role: z.string(),
-      // client: z.string().optional(),
-      // liveUrl: z.url().optional(),
-      // githubUrl: z.url().optional(),
-      // metrics: z
-      //   .array(
-      //     z.object({
-      //       label: z.string(),
-      //       value: z.string(),
-      //     }),
-      //   )
-      //   .optional(),
     }),
 });
 
