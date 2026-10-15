@@ -20,11 +20,11 @@ const sortedProjects = featuredProjects.sort((a, b) => b.data.date.getTime() - a
     </p>
   </SectionBanner>
 
-  <div class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
-    <FadeIn>
+  <FadeIn>
+    <div class="w-full flex flex-wrap gap-6 items-center justify-center justify-items-center px-2 md:px-">
       {sortedProjects.map((project) => (
         <ProjectCard project={project} />
       ))}
-    </FadeIn>
-  </div>
+    </div>
+  </FadeIn>
 </Section>
