@@ -33,6 +33,8 @@
   --color-card-shadow-color: var(--card-shadow-color);
   --color-card-work-tools: var(--card-work-tools);
   --shadow-card-project: 0 0 10px 0 var(--card-shadow-color);
+  --color-card-skills-brand-selection-bg: var(--card-skills-brand-selection-bg);
+  --color-card-skills-brand-selection-fg: var(--card-skills-brand-selection-text);
 
   /* Global theme toggle layer */
   --color-theme-toggle-track-bg: var(--theme-toggle-track-bg);
@@ -72,6 +74,8 @@
   --cards-skills-fg: #1b1a1c;
   --cards-skills-bg-brand: #4551c6;
   --cards-skills-brand-fg: var(--white);
+  --card-skills-brand-selection-text: #1b1a1c;
+  --card-skills-brand-selection-bg: #26ebbe;
   --cards-project-bg: var(--white);
   --cards-contact-bg: var(--white);
   --card-work-tools: #0b090b;
