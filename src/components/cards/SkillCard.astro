@@ -15,7 +15,11 @@ const { class: className, title, description } = Astro.props;
     className,
   ]}
 >
-  <div class="w-[70%] h-auto">
+  <div
+    class="flex h-28 w-full items-center justify-center
+         [&>svg]:max-h-full [&>svg]:max-w-full
+         [&>svg]:h-full [&>svg]:w-auto"
+  >
     <slot />
   </div>
 
