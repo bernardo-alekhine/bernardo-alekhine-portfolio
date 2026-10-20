@@ -1,31 +1,30 @@
 export const skills = {
-  branding: {
-    title: "Identidade Visual e Branding",
+  softwareDevelopment: {
+    title: "Desenvolvimento de Software",
     description: [
-      "Desenvolvimento de logotipos, paletas de cores e tipografias",
-      "com foco em padronização, identidade e",
-      "consistência visual.",
+      "Desenvolvimento de aplicações e soluções web, com foco em código organizado, boas práticas e  interfaces",
+      "funcionais. Experiência com Python, JavaScript/TypeScript e tecnologias web modernas.",
     ].join(" "),
   },
-  "social-media": {
-    title: "Design para Redes Sociais e Mídia Digital",
+  infrastructure: {
+    title: "Suporte & Infraestrutura",
     description: [
-      "Criação de posts atraentes e criativos para o Instagram e canais digitais. Focados em engajamento e impacto",
-      "estético.",
+      "Manutenção, configuração e suporte a computadores, sistemas e periféricos. Diagnóstico e resolução de problemas",
+      "de hardware, software e infraestrutura de TI.",
     ].join(" "),
   },
-  "print-materials": {
-    title: "Materiais Impressos e Promocionais",
+  UIUX: {
+    title: "UI/UX Design",
     description: [
-      "Desenvolvimento de panfletos, cartões de visita, cardápios, embalagens e fachadas. Garantindo total precisão",
-      "técnica para produção.",
+      "Criação e prototipação de interfaces digitais com foco em usabilidade, hierarquia visual e experiência do",
+      "usuário. Desenvolvimento de layouts responsivos e sistemas visuais no Figma.",
     ].join(" "),
   },
-  "visual-communication": {
-    title: "Comunicação Visual e Peças Publicitárias",
+  graphicDesign: {
+    title: "Design Gráfico",
     description: [
-      "Criação de layouts de grande formato, como outdoors, banners e lonas. Desenvolvidos sob medida para campanhas",
-      "institucionais ou publicitárias.",
+      "Criação de identidades visuais, peças publicitárias e materiais gráficos para meios digitais e impressos.",
+      "Desenvolvimento de layouts, composições e elementos visuais para diferentes aplicações.",
     ].join(" "),
   },
 };
