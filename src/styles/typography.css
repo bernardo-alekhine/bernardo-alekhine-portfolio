@@ -1,11 +1,11 @@
 @theme {
-  /* Display 36px @ 412px, 64px @ 1440px*/
-  --text-display: clamp(2.25rem, calc(1.549rem + 2vmin), 4rem);
+  /* Display 32px @ 412px, 60px @ 1440px*/
+  --text-display: clamp(2rem, calc(1.549rem + 1.7vmin), 3.75rem);
   --text-display--font-weight: 700;
   --text-display--line-height: 1.2;
 
   /* Lead 18px @ 412px, 24px @ 1440px */
-  --text-lead: clamp(1.125rem, calc(1rem + 1vmin), 1.5rem);
+  --text-lead: clamp(1.125rem, calc(1rem + 0.9vmin), 1.5rem);
   --text-lead--font-weight: 400;
   --text-lead--line-height: 1.5;
 
