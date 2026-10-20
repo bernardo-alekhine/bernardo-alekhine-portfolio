@@ -2,7 +2,7 @@ export const skills = {
   softwareDevelopment: {
     title: "Desenvolvimento de Software",
     description: [
-      "Desenvolvimento de aplicaões e soluções web. Com foco em código organizado, boas práticas e interfaces",
+      "Desenvolvimento de aplicações e soluções web. Com foco em código organizado, boas práticas e interfaces",
       "funcionais. Experiência com Python, JavaScript/TypeScript e tecnologias web modernas.",
     ].join(" "),
   },
