@@ -39,6 +39,17 @@ const formattedDate: string = project.data.date.toLocaleDateString(locale, {
         <small class="text-tag text-sm bg-card-shadow-color/20 px-2 py-0.5 rounded">{tag}</small>
       ))}
     </div>
+
+    {project.data.links && project.data.links.length > 0 && (
+      <div class="text-left flex h-auto flex-row gap-3">
+        {project.data.links.map((link) => (
+          <a class="w-fit text-md text-brand hover:text-brand-hover" href={link.url}>
+            {link.label} ↗
+          </a>
+        ))}
+      </div>
+    )}
+
     <time class="text-left w-full text-nav-item text-sm" datetime={project.data.date.toISOString().split("T")[0]}>
       Desenvolvido em {formattedDate}
     </time>

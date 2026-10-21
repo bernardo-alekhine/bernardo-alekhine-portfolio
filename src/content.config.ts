@@ -13,6 +13,14 @@ const projectsCollection = defineCollection({
       coverImageAlt: z.string(),
       tags: z.array(z.string()),
       featured: z.boolean().default(false),
+      links: z
+        .array(
+          z.object({
+            label: z.string(),
+            url: z.url(),
+          }),
+        )
+        .optional(),
     }),
 });
 
