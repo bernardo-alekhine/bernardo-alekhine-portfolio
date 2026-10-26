@@ -17,7 +17,8 @@ featured: true
 ---
 
 import { Image } from "astro:assets";
-import CoverImageFile from "./logo-card-mockup.png";
+import CardsMockupImage from "./logo-card-mockup.png";
+import LogoDrafts from "./logo-drafts.png";
 
 {/*
 
@@ -60,36 +61,47 @@ Implementações no site e versão monograma
 
 ## Introdução
 
-Identidades visuais ajudam pessoas, produtos e organizações a construir reconhecimento e diferenciar a sua presença em
-diversos contextos. Dentre os elementos de uma identidade visual, o logotipo assume um dos papeis principais. Ele
-condensa visualmente as características que uma marca busca comunicar. (verificar se remover esse boilerplate anterior ou não) Ao desenvolver a minha própria identidade, o
-desafio foi criar um símbolo que representasse meu nome sem se limitar a um monograma de iniciais genérico. Além de ser
-reconhecível, ele deveria estabelecer uma relação entre duas áreas presentes no meu trabalho: tecnologia e design.
+Ao desenvolver a minha própria identidade visual, o desafio foi criar um símbolo que representasse meu nome sem se limitar a um 
+monograma de iniciais genérico. Além de ser reconhecível, ele deveria estabelecer uma relação entre duas áreas presentes 
+no meu trabalho: tecnologia e design.
 
 Esse logotipo deveria direcionar a identidade visual do meu site de portfólio. Servindo como o alicerce para a construção
-da paleta de cores, sendo utilizado (algo que envolva presença/participação) em elementos gráficos personalizados do site. Somado a isso, o logotipo  
-deve ter uma estrutura apropriada para a utilização em rede sociais e peças de mídia digital.
+da paleta de cores, e participando em elementos gráficos personalizados do site. Somado a isso, o logotipo deve ter uma 
+estrutura apropriada para a utilização em rede sociais e peças de mídia digital.
 
 ## O problema
 
 Era necessário que o logotipo representasse a minha área de atuação profissional. O monograma deveria utilizar cores 
-que resultassem (ou outra palavra similar) em uma composição única e moderna para o logotipo. Ademais, o logotipo precisaria atuar em harmonia com
-o ambiente em que ele fosse utilizado. Mantendo um bom contraste tanto em temas (ou fundos) claros quanto temas escuros.
+que combinassem em uma composição única e moderna para o logotipo. Ademais, o logotipo precisaria atuar em harmonia com
+o ambiente em que ele fosse utilizado. Mantendo um bom contraste tanto em fundos claros quanto fundos escuros.
 
 ## Concepção
 
-Um dos ganchos prinicipais para a cor de destaque do logotipo foi a paleta de cores do personagem Hajime Kashimo 
+Uma das principais inspirações para a cor de destaque do logotipo foi a paleta de cores do personagem Hajime Kashimo 
 do anime Jujutsu Kaisen. O personagem tem cabelos e olhos na cor turquesa, que refletem os seus poderes de manipulação de
-eletricidade. Na teoria das cores, 
+eletricidade. Na teoria das cores, essa cor também está associada com a tecnologia, o mundo digital e a inovação.
 
+A solução adotada foi um monograma com as iniciais do meu nome. O traçado das iniciais na cor turquesa representam a tecnologia,
+e os quadrados na cor azul posicionados nas vertíces das iniciais representam o design. Semelhante aos nós dos vetores em programas de design gráfico.
+O tom azul/roxo mais escuro serve como uma âncora para o contraste do monograma em temas claros. Onde a cor turquesa isoladamente
+teria pouco contraste com o fundo. Aplicada no logotipo, ela complementa o meu nome com uma fonte moderna clean e um texto
+destacando a minha área de atuação profissional na tecnologia e design.
 
-Esse tom de azul acaba servindo bem na teoria de cores como uma cor de inovação e tecnologia. Sem acabar ficando
-muito no ambito mais generico e abrangente de algum tom de azul tradicional ou similares (não que isso fosse problema).
-
-Mas relâmpago e eletricidade embora sejam uma parte da área de tecnologia, não condiz muito com a realidade e os objetivos do
-logotipo. Mas a inspiração inicial continuou para cor de destaque da marca.
+{/* Talvez inserir imagem aqui do kashimo e como essa cor atua na teoria das cores */}
 
 ## Construção
+
+Após definida a cor de destaque, o objetivo foi criar um símbolo único que unisse a minha área de atuação profissional com
+o meu nome. De início, uma das iterações iniciais foi uma linha simples e nós organizadas acima do meu nome baseado em determinada fonte. Mas só uma linha não
+conseguiu representar algo único o suficiente e o determinado objetivo. Fontes diferentes foram testadas e em certo momento
+a fonte escolhida serviu de referência para tentar fazer o monograma baseado nas iniciais do meu nome.
+
+<div class="flex flex-col gap-2">
+  <figcaption class="text-main-body text-body-color w-full text-center">Iterações da Logo</figcaption>
+  <Image src={LogoDrafts} alt="Iterações e conceitos iniciais da logo Bernardo Alekhine." class="w-full max-w-none border-2 border-card-shadow-color/20" />
+</div>
+
+{/* Talvez algo que envolva reduzir o traçado extra das inciais */}
 
 Tendo uma cor definida, o objetivo seria fazer o símbolo que fosse unico (talvez isso esteja redundante com parágrafo 
 anterior, qualquer coisa eliminar) associado a mim e não necessariamente algum objeto ou elemento qualquer. De inicio 
@@ -120,7 +132,7 @@ Affinity. Não sei se ja foi falado ou não mas ai teve suas aplicações na ide
 
 <div class="flex flex-col gap-2">
   <figcaption class="text-main-body text-body-color w-full text-center">Cartões de negócio</figcaption>
-  <Image src={CoverImageFile} alt="Cartões de negócio com a logo Bernardo Alekhine." class="w-full max-w-none" />
+  <Image src={CardsMockupImage} alt="Cartões de negócio com a logo Bernardo Alekhine." class="w-full max-w-none" />
 </div>
 
 Fusce auctor purus ac tortor placerat finibus. Ut quis sapien eu lorem varius tempor. Aenean rhoncus risus vitae odio
