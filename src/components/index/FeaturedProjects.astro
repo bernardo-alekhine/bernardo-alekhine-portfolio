@@ -1,9 +1,9 @@
 ---
-import Section from "../Section.astro";
-import SectionBanner from "../SectionBanner.astro";
-import FadeIn from "../FadeIn.astro";
+import Section from "@components/Section.astro";
+import SectionBanner from "@components/SectionBanner.astro";
+import FadeIn from "@components/FadeIn.astro";
 import { getCollection } from "astro:content";
-import ProjectCard from "../cards/ProjectCard.astro";
+import ProjectCard from "@components/cards/ProjectCard.astro";
 
 const featuredProjects = await getCollection("projects", ({ data }) => {
   return data.featured === true;
