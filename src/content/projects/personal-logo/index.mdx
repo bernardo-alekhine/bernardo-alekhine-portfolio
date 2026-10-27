@@ -19,6 +19,7 @@ featured: true
 import { Image } from "astro:assets";
 import CardsMockupImage from "./logo-card-mockup.png";
 import LogoDrafts from "./logo-drafts.png";
+import HajimeKashimo from "./hajime-kashimo.jpg";
 
 {/*
 
@@ -61,13 +62,13 @@ Implementações no site e versão monograma
 
 ## Introdução
 
-Ao desenvolver a minha própria identidade visual, o desafio foi criar um símbolo que representasse meu nome sem se limitar a um 
-monograma de iniciais genérico. Além de ser reconhecível, ele deveria estabelecer uma relação entre duas áreas presentes 
-no meu trabalho: tecnologia e design.
+Ao desenvolver a minha própria identidade visual, o desafio foi criar um logotipo que representasse meu nome sem se limitar
+a um  monograma de iniciais genérico. Além de ser reconhecível, ele deveria estabelecer uma relação entre duas áreas 
+presentes no meu trabalho: tecnologia e design.
 
-Esse logotipo deveria direcionar a identidade visual do meu site de portfólio. Servindo como o alicerce para a construção
-da paleta de cores, e participando em elementos gráficos personalizados do site. Somado a isso, o logotipo deve ter uma 
-estrutura apropriada para a utilização em rede sociais e peças de mídia digital.
+Esse logotipo deveria direcionar a identidade visual do meu site de portfólio. Servindo como o alicerce para a 
+construção da paleta de cores, e participando em elementos gráficos personalizados do site. Somado a isso, esse logotipo
+deve ter uma  estrutura apropriada para a utilização em rede sociais e peças de mídia digital.
 
 ## O problema
 
@@ -78,41 +79,55 @@ o ambiente em que ele fosse utilizado. Mantendo um bom contraste tanto em fundos
 ## Concepção
 
 Uma das principais inspirações para a cor de destaque do logotipo foi a paleta de cores do personagem Hajime Kashimo 
-do anime Jujutsu Kaisen. O personagem tem cabelos e olhos na cor turquesa, que refletem os seus poderes de manipulação de
-eletricidade. Na teoria das cores, essa cor também está associada com a tecnologia, o mundo digital e a inovação.
+do anime Jujutsu Kaisen. O personagem tem cabelos e olhos na cor turquesa, que refletem os seus poderes de manipulação
+de eletricidade. Na teoria das cores, essa cor também está associada com a tecnologia, o mundo digital e a inovação.
 
-A solução adotada foi um monograma com as iniciais do meu nome. O traçado das iniciais na cor turquesa representam a tecnologia,
-e os quadrados na cor azul posicionados nas vertíces das iniciais representam o design. Semelhante aos nós dos vetores em programas de design gráfico.
-O tom azul/roxo mais escuro serve como uma âncora para o contraste do monograma em temas claros. Onde a cor turquesa isoladamente
-teria pouco contraste com o fundo. Aplicada no logotipo, ela complementa o meu nome com uma fonte moderna clean e um texto
-destacando a minha área de atuação profissional na tecnologia e design.
+<div class="flex flex-col gap-2">
+  <Image 
+    src={HajimeKashimo} 
+    alt="Imagem do rosto do personagem Hajime Kashimo do anime Jujutsu Kaisen."
+    class="w-full max-w-none border-2 border-card-shadow-color/30" 
+  />
+  <figcaption class="text-body-color w-full text-center">
+    <p class="text-sm">Hajime Kashimo — Jujutsu Kaisen © Gege Akutami / Shueisha</p>
+  </figcaption>
+</div>
 
-{/* Talvez inserir imagem aqui do kashimo e como essa cor atua na teoria das cores */}
+A solução adotada foi um logotipo com um monograma com as iniciais do meu nome. O traçado das iniciais na cor turquesa 
+representam a tecnologia, e os quadrados na cor azul posicionados nas vertíces das iniciais representam o design. Os 
+quadrados fazem referência aos nós dos vetores em programas de design gráfico. A cor azul-real dos quadrados aumenta o
+contraste do monograma em temas claros. Onde a cor turquesa teria pouco destaque se usada por conta própria em fundos 
+claros. O monograma é incorporado com o meu nome e área de atuação representados com uma tipografia de estética 
+minimalista e moderna.
 
 ## Construção
 
 Após definida a cor de destaque, o objetivo foi criar um símbolo único que unisse a minha área de atuação profissional com
-o meu nome. Utilizando o programa Affinity no estúdio de vetores. Uma das iterações iniciais foi uma linha simples com 
-nós de vetores colocada acima do meu nome. Mas só essa linha não conseguiu representar suficientemente a junção de Tecnologia e Design.
-Testei diferentes fontes para serem usadas no meu nome no logotipo e, em determinado momento, a fonte final escolhida foi usada de referência para
-elaborar o monograma baseado nas iniciais do meu nome.
+o meu nome. Utilizando o programa Affinity no estúdio de vetores. Uma das versões iniciais foi uma linha simples com 
+nós de vetores colocada acima do meu nome. Mas só uma linha com nós não representaria suficientemente a junção de Tecnologia e Design.
+Testei diferentes fontes para serem usadas no meu nome no logotipo, e, em determinado momento, cheguei a uma fonte que
+funcionava bem por conta própria. Essa fonte foi usada de base para elaborar o monograma baseado nas inicais do meu nome. 
 
 <div class="flex flex-col gap-2">
-  <figcaption class="text-main-body text-body-color w-full text-center">Iterações da Logo</figcaption>
-  <Image src={LogoDrafts} alt="Iterações e conceitos iniciais da logo Bernardo Alekhine." class="w-full max-w-none border-2 border-card-shadow-color/20" />
+  <h3 class="text-main-body text-body-color font-medium w-full text-center">Processo de Desenvolvimento do Logotipo</h3>
+  <Image src={LogoDrafts} alt="Iterações e conceitos iniciais da logo Bernardo Alekhine." class="w-full max-w-none border-2 border-card-shadow-color/30" />
 </div>
+
+Após mais algumas iterações e testes com posições diferentes dos nós do monograma, chegou a um estágio que o logotipo
+já estava bem próximo do resultado final esperado para o logotipo. Como é possível visualizar na imagem do processo de
+desenvolvimento do logotipo.
 
 {/* Talvez algo que envolva reduzir o traçado extra das inciais */}
 
 ## Versão Final
 
-A versão final do logotipo foi estruturada com o monograma centralizado acima do nome Bernardo Alekhine. Com a Tagline "Tecnologia & Design"
-reforçando as minhas áreas de atuação. A aplicação do logotipo em fundos claros e escuros está ilustrada no seguinte mockup de cartões
-de negócio:
+A versão final do logotipo foi estruturada com o monograma centralizado acima do nome Bernardo Alekhine. Com pequenos ajustes
+com relação a espessura e comprimento do seu traçado. Suplementado com a Tagline "Tecnologia & Design" reforçando as
+minhas áreas de atuação profissional. A aplicação do logotipo em fundos claros e escuros está ilustrada no mockup abaixo:
 
 <div class="flex flex-col gap-2">
-  <figcaption class="text-main-body text-body-color w-full text-center">Cartões de negócio</figcaption>
-  <Image src={CardsMockupImage} alt="Cartões de negócio com a logo Bernardo Alekhine." class="w-full max-w-none" />
+  <h3 class="text-main-body text-body-color font-medium w-full text-center">Mockup Logotipo Bernardo Alekhine</h3>
+  <Image src={CardsMockupImage} alt="Mockup de cards com o logotipo Bernardo Alekhine." class="w-full max-w-none border-2 border-card-shadow-color/30" />
 </div>
 
 O monograma consegue exercer o papel de sintetizar as áreas de Tecnologia e Design por conta própria. Com aplicações no meu site de portfólio,
