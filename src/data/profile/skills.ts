@@ -21,7 +21,7 @@ export const skills = [
         content: [
           "Aplicação de conceitos de Programação Orientada a Objetos (OOP), CI/CD, modelagem de banco",
           "de dados, Engenharia de Requisitos, versionamento com Git/GitHub e conteinerização com Docker.",
-        ],
+        ].join(" "),
       },
     ],
   },
