@@ -14,7 +14,7 @@ const { title = "Default Title", class: className } = Astro.props;
 ---
 
 <!doctype html>
-<html class="scroll-smooth scroll-pt-16 md:scroll-pt-20" lang="pt-BR">
+<html class="scroll-smooth scroll-pt-16 md:scroll-pt-20" lang="pt-BR" transition:persist>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -22,19 +22,22 @@ const { title = "Default Title", class: className } = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <script is:inline>
-      function applyTheme() {
+      function applyTheme(root = document.documentElement) {
         const savedTheme = localStorage.getItem("theme");
 
-        if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-        }
+        const theme =
+          savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ? "dark"
+            : "light";
+
+        root.setAttribute("data-theme", theme);
       }
 
       applyTheme();
 
-      document.addEventListener("astro:after-swap", applyTheme);
+      document.addEventListener("astro:before-swap", (event) => {
+        applyTheme(event.newDocument.documentElement);
+      });
     </script>
     <!-- Scroll to top of page when refreshing tab on route targeting id, e.g: index/#skills"  -->
     <script is:inline>
