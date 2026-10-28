@@ -23,7 +23,7 @@ const { title = "Default Title", class: className } = Astro.props;
 
     <script is:inline>
       function applyTheme(root = document.documentElement) {
-        const savedTheme = localStorage.getItem("theme");
+        const savedTheme = sessionStorage.getItem("theme");
 
         const theme =
           savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)

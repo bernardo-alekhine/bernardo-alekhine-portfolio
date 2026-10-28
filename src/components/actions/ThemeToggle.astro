@@ -69,7 +69,7 @@ import MoonIcon from "@components/icons/theme-switch/MoonIcon.astro";
       const newTheme = currentTheme === "dark" ? "light" : "dark";
 
       root.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
+      sessionStorage.setItem("theme", newTheme);
     });
   }
 
